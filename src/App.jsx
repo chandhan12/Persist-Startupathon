@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import TopSection from './components/TopSection'
 import RewardsSection from './components/RewardsSection'
+import ChallengeSection from './components/ChallengeSection'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
         <Navbar/>
         <TopSection/>
         <RewardsSection />
+        <ChallengeSection/>
        </div>
        </>
   )
