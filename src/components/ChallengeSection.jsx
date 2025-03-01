@@ -28,7 +28,7 @@ const ChallengeSection = () => {
     fetchChallenges()
    },[])
 
-   console.log(challenges)
+
   return (
     <div>
         <h2 className='text-3xl text-center md:text-5xl m-1 p-1 font-semibold text-white'>Ongoing startupathon challenges</h2>
