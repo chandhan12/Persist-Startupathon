@@ -10,6 +10,7 @@ import GuideSection from './components/GuideSection'
 import HiringProcessSection from './components/HiringProcessSection'
 import SubscribeSection from './components/SubscribeSection'
 import CompletersSection from './components/CompletersSection'
+import FoundersSection from './components/FoundersSection'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
         <HiringProcessSection/>
         <SubscribeSection />
         <CompletersSection />
+        <FoundersSection />
        </div>
        </>
   )
