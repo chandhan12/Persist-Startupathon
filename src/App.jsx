@@ -24,9 +24,10 @@ function App() {
         <ChallengeSection/>
         <GuideSection/>
         <HiringProcessSection/>
-        <SubscribeSection />
+
         <CompletersSection />
         <FoundersSection />
+        <SubscribeSection />
        </div>
        </>
   )
