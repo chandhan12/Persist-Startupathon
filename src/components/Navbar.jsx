@@ -8,7 +8,7 @@ const Navbar = () => {
   <div>
     <img className="h-36 w-36" src="https://cdn.prod.website-files.com/623ae64112adcf772da9687e/678a14a9d3a398bc1e9633b3_Persist%20Startupathon%20White.svg" alt="Logo" />
   </div>
-  <div className='p-2 text-white hidden md:block'>
+  <div className='p-2 text-white hidden lg:block'>
     <Link className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>Ongoing Startupathon</Link>
     <Link className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>Completed Startupathon</Link>
     <Link className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>Startupathon Guide</Link>

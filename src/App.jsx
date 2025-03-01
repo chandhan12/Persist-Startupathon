@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import TopSection from './components/TopSection'
+import RewardsSection from './components/RewardsSection'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +14,7 @@ function App() {
       <div className=''>
         <Navbar/>
         <TopSection/>
-        
+        <RewardsSection />
        </div>
        </>
   )
