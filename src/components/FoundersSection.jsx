@@ -33,7 +33,7 @@ const FoundersSection = (props) => {
             isMounted=false
            }
         },[page])
-        console.log(founders)
+      
 
 
 

@@ -10,14 +10,14 @@ const ChallengeSection = () => {
     try {
         const res=await axios.get("http://localhost:3000/api/admin/challenges")
         const allChallenges=res.data.challenges
-        console.log(allChallenges)
+       
 
         const filteredChallenges=allChallenges.filter((eachChallenge)=>{
             return(
                 eachChallenge.status ==true
             )
         })
-        console.log(`filtered: ${filteredChallenges}`)
+        
 
         setChallenges(filteredChallenges)
 

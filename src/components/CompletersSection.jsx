@@ -35,7 +35,7 @@ const CompletersSection = () => {
         isMounted=false
        }
     },[page])
-    console.log(completers)
+   
    
   return (
     <div id="completers">
