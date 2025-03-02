@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className='bg-black pb-2 h-auto w-full flex justify-center items-center gap-2'>
        <div className='flex md:flex-row flex-col gap-10 p-2 '>
-       <div className='w-113 cursor-pointer'>
+       <div className='w-auto cursor-pointer ml-12'>
             <img className='h-44 w-60' src='https://cdn.prod.website-files.com/623ae64112adcf772da9687e/678a14a9d3a398bc1e9633b3_Persist%20Startupathon%20White.svg' alt="" />
             <p className='text-slate-200 text-sm text-wrap'>We partner with entrepreneurs and businesses to help scale and grow their ideas. With a diverse team skilled in every sector there is no business we can not help get a leg up.</p>
 

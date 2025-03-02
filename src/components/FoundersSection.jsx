@@ -38,7 +38,7 @@ const FoundersSection = (props) => {
 
 
   return (
-    <div>
+    <div  id="founders">
       <h2 className='text-2xl text-center text-wrap  md:text-3xl m-1 p-1 font-semibold text-white'>
         By getting accepted you unlock access to our elite founder network.</h2>
         <p className='text-slate-300 text-xl font-normal text-center text-wrap'>

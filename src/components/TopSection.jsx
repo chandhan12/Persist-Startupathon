@@ -6,7 +6,7 @@ const TopSection = () => {
   return (
     // shadow-[0_0_15px_rgba(138,43,226,0.9)]
     <div className="  h-auto mt-20  p-4 ">
-    <div className='opacity-45'>
+    <div className='opacity-30'>
     <div className='flex justify-center relative ' >
       <img className=' h-56 md:h-80 w-full md:w-4/5 grayscale' src="https://cdn.prod.website-files.com/623ae64112adcf772da9687e/66b7a9b742a15fc71db053f3_pv%20team%20cropped.png" alt="" />
       <div className="absolute h-14 bottom-0 w-full md:w-4/5 bg-[#0a0112] rounded-lg opacity-95 text-white text-center p-3">

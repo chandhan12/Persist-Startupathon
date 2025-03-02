@@ -38,7 +38,7 @@ const CompletersSection = () => {
     console.log(completers)
    
   return (
-    <div>
+    <div id="completers">
       <h2 className='text-3xl text-center md:text-5xl m-1 p-1 font-semibold text-white'>Completed Startupathon Challenges</h2>
       <p className='text-slate-300 text-lg font-normal text-center text-wrap'>
         People like you have cracked Startupathon challenges and are now leading thriving startups.

@@ -2,7 +2,7 @@ import React from 'react'
 
 const HiringProcessSection = () => {
   return (
-    <div className='flex justify-center flex-col items-center'>
+    <div id="howtowin" className='flex justify-center flex-col items-center'>
     <div className='flex flex-col items-center h-auto lg:w-3/4 w-auto lg:m-2 mx-10 p-2'>
       <h2 className='text-2xl text-center text-wrap  md:text-3xl m-1 p-1 font-semibold text-white'>Work Smart, Win Big: Pro Tips from Swapnil Sharma, CTO of Ovadrive (A Startupathon Success)</h2>
       <div className='border-purple-600 border-2 rounded-lg lg:w-3/4 w-full m-4 mx-10 '>
@@ -11,7 +11,7 @@ const HiringProcessSection = () => {
 {/* width="850" height="450" */}
         
     </div>
-    <div className='flex flex-col items-center h-auto lg:w-3/4 w-auto lg:m-2 mx-10 p-2'>
+    <div  className='flex flex-col items-center h-auto lg:w-3/4 w-auto lg:m-2 mx-10 p-2'>
       <h2 className='text-2xl text-center text-wrap  md:text-3xl m-1 p-1 font-semibold text-white'>Work Smart, Win Big: Pro Tips from Swapnil Sharma, CTO of Ovadrive (A Startupathon Success)</h2>
       <div className='border-purple-600 border-2 rounded-lg lg:w-3/4 w-full m-4 mx-10 '>
       <iframe className=" top-0 left-0 w-full h-84 md:h-110 rounded-lg border-purple-600 border"

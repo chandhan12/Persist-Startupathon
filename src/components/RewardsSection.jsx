@@ -1,9 +1,22 @@
 import React from 'react'
 import RewardsCard from './RewardsCard'
 
+const perks=[
+  {
+    id:1,
+    logo:"https://cdn.prod.website-files.com/623ae64112adcf772da9687e/676ae0f56f2bdcaefd17dfb0_icons8-salary-100.png",
+    text:"Competitive Salary"
+  },
+  {
+    id:2,
+    log:"https://cdn.prod.website-files.com/623ae64112adcf772da9687e/676ae0f56e32a2b11cb90771_icons8-funding-100.png",
+    text:"≥ $10,000 USD in Company Funding"
+  }
+]
+
 const RewardsSection = () => {
   return (
-    <div className='lg:block hidden items-center'>
+    <div className=' items-center'>
         <h2 className='text-2xl text-center md:text-3xl m-1 p-1 font-semibold text-white'>Startupathon Success Comes with Extraordinary Rewards</h2>
     <div className='flex flex-wrap justify-center  items-center gap-4 m-4'>
       <RewardsCard logo="https://cdn.prod.website-files.com/623ae64112adcf772da9687e/676ae0f56f2bdcaefd17dfb0_icons8-salary-100.png" text="Competitive Salary" />

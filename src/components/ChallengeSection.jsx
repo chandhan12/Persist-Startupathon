@@ -30,7 +30,7 @@ const ChallengeSection = () => {
 
 
   return (
-    <div>
+    <div id="challenge">
         <h2 className='text-3xl text-center md:text-5xl m-1 p-1 font-semibold text-white'>Ongoing startupathon challenges</h2>
         <p className='text-slate-300 text-lg font-normal text-center text-wrap'>Start your challenge-tackle live challenges,earn equity,and lead the future</p>
         <div className='grid lg:grid-cols-3 sm:grid-cols-2 m-4 lg:ml-16 items-center justify-center  '>
