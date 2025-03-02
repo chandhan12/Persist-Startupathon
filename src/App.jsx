@@ -11,6 +11,8 @@ import HiringProcessSection from './components/HiringProcessSection'
 import SubscribeSection from './components/SubscribeSection'
 import CompletersSection from './components/CompletersSection'
 import FoundersSection from './components/FoundersSection'
+import Footer from './components/Footer'
+import FellowShip from './components/FellowShip'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,10 +26,11 @@ function App() {
         <ChallengeSection/>
         <GuideSection/>
         <HiringProcessSection/>
-
+        <FellowShip />
         <CompletersSection />
         <FoundersSection />
         <SubscribeSection />
+        <Footer/>
        </div>
        </>
   )

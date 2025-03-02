@@ -6,7 +6,9 @@ const FounderCard = (props) => {
     <div className='col-span-1 m-2 mr-4 lg:mr-2 h-auto hover:shadow-[0px_0px_15px_#432d7b]  transition-all  duration-100 border-purple-600 border w-full sm:w-72 xl:w-84   rounded-2xl 
    flex flex-col  p-4 bg-[#0a0111]'>
 
-    <img src={profilePic} className='h-36 w-full rounded-lg m-2' alt="" />
+    <div className='flex justify-center'>
+    <img src={profilePic} className=' h-44 md:h-36 w-96 md:w-full rounded-lg m-2' alt="" />
+    </div>
 
     <h2 className='text-white text-2xl text-left font-semibold m-1'>{name}</h2>
 
