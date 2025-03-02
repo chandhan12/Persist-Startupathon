@@ -15,7 +15,7 @@ import Footer from './components/Footer'
 import FellowShip from './components/FellowShip'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>

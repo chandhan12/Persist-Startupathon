@@ -41,6 +41,7 @@ console.log(challenges)
             challenges.map((challenge)=>{
                 return(
                     <ChallengeCard image={challenge.image}
+                    key={challenge._id}
                         title={challenge.title}
                         funding={challenge.funding}
                         description={challenge.description}

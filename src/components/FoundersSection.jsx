@@ -49,7 +49,7 @@ const FoundersSection = (props) => {
         {
             founders.map((founder)=>{
                 return (
-                    <FounderCard name={founder.name} profilePic={founder.profilePic} position={founder.position} bio={founder.bio} highlights={founder.highlights} />
+                    <FounderCard name={founder.name} key={founder._id} profilePic={founder.profilePic} position={founder.position} bio={founder.bio} highlights={founder.highlights} />
                 )
 
             })
