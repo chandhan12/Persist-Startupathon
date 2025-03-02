@@ -6,3 +6,13 @@ export const speakerIcon=<svg xmlns="http://www.w3.org/2000/svg" fill="none" vie
 export const navIcon=<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  stroke="currentColor" className="size-6 text-white ">
 <path  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 </svg>
+
+
+export const rightArrowIcon=<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  stroke="currentColor" className="size-8 transition-all duration-200 hover:-translate-y-1.5 hover:text-purple-600">
+<path  d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+</svg>
+
+
+export const leftArrowIcon=<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  stroke="currentColor" className="size-8 transition-all duration-200 hover:-translate-y-1.5 hover:text-purple-600">
+<path  d="M15.75 19.5 8.25 12l7.5-7.5" />
+</svg>

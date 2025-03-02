@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import RewardsCard from './RewardsCard'
+import { leftArrowIcon, rightArrowIcon } from '../icons';
 
 const perks=[
   {
@@ -89,12 +90,12 @@ const RewardsSection = () => {
       <div className='flex justify-center items-center'>
         {filteredPerks.map((perk, index) => (
           <div key={index} className="flex justify-center items-center">
-            <button className='text-white m-2' onClick={leftPerk}>Left</button>
-            <div className="h-44 w-52 rounded-md shadow-[2px_2px_2px_#432d7b] hover:bg-[#1e1426] transition-all duration-300 hover:-translate-y-1.5 flex flex-col items-center p-2 bg-[#150722]">
+            <button className='text-white m-2 p-2 rounded-lg cursor-pointer' onClick={leftPerk}>{leftArrowIcon}</button>
+            <div className="h-52 w-52 rounded-md shadow-[2px_2px_2px_#432d7b] hover:bg-[#1e1426] transition-all duration-300 hover:-translate-y-1.5 flex flex-col items-center p-2 bg-[#150722]">
               <img className="h-16 w-14 mt-4" src={perk.logo} alt="" />
               <p className="text-white m-1 font-semibold text-center text-lg">{perk.text}</p>
             </div>
-            <button onClick={rightPerk} className='text-white m-2 bg-black p-2 rounded-lg cursor-pointer'>Right</button>
+            <button onClick={rightPerk} className='text-white m-2  p-2 rounded-lg cursor-pointer'>{rightArrowIcon}</button>
           </div>
         ))}
       </div>
