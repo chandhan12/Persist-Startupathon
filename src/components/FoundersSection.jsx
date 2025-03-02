@@ -13,7 +13,7 @@ const FoundersSection = (props) => {
     
             const fetchFounders=async ()=>{
                 try {
-                const response=await axios.get(`http://localhost:3000/api/admin/founders?page=${page}&limit=4`)
+                const response=await axios.get(`https://persiststartupathon-admin.onrender.com/api/admin/founders?page=${page}&limit=4`)
                 if(isMounted){
                     setFounders((prev)=>
                         page==1 ? response.data.founders : [...prev, ...response.data.founders]

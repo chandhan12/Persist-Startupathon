@@ -8,10 +8,11 @@ const ChallengeSection = () => {
    useEffect(()=>{
    const fetchChallenges=async ()=>{
     try {
-        const res=await axios.get("http://localhost:3000/api/admin/challenges")
+        const res=await axios.get("https://persiststartupathon-admin.onrender.com/api/admin/challenges")
         const allChallenges=res.data.challenges
        
 
+        console.log(res.data.challenges)
         const filteredChallenges=allChallenges.filter((eachChallenge)=>{
             return(
                 eachChallenge.status ==true
@@ -27,7 +28,7 @@ const ChallengeSection = () => {
    }
     fetchChallenges()
    },[])
-
+console.log(challenges)
 
   return (
     <div id="challenge">

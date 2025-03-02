@@ -15,7 +15,7 @@ const CompletersSection = () => {
 
         const fetchCompleters=async ()=>{
             try {
-            const response=await axios.get(`http://localhost:3000/api/admin/completers?page=${page}&limit=6`)
+            const response=await axios.get(`https://persiststartupathon-admin.onrender.com/api/admin/completers?page=${page}&limit=6`)
             if(isMounted){
                 setCompleters((prev)=>
                     page==1 ? response.data.completers : [...prev, ...response.data.completers]

@@ -17,7 +17,7 @@ const SubscribeSection = () => {
 
         const name=email.split("@")[0]
 
-        await axios.post("http://localhost:3000/api/admin/subscribers",{
+        await axios.post("https://persiststartupathon-admin.onrender.com/api/admin/subscribers",{
             name,
             email
         })
