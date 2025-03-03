@@ -22,7 +22,7 @@ const CompletersCard = (props) => {
             <div className='h-8 rounded-lg w-8 m-2 bg-purple-800 cursor-pointer'>
                 <a href={linkedinUrl}><img  src="https://cdn.prod.website-files.com/623ae64112adcf772da9687e/66e81ea7c52c2eb1db6a973f_ico_soc-03.svg" alt="" /></a>
             </div>
-            <p className=' text-sm text-white truncate'>{description}</p>
+            <p className=' text-sm text-white'>{description}</p>
         </div>
        </div>
        <p className='text-white font-semibold'>Initial Funding Offered: <span className='font-bold text-lg text-purple-900'>${funding}</span></p>
