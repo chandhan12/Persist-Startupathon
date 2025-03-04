@@ -9,7 +9,6 @@ const CustomButton = (props) => {
       transition-all duration-400 cursor-pointer 
       shadow-[0_0_15px_rgba(138,43,226,0.9)] text-white text-md font-semibold'>
       <p className='cursor-poniter'>{text}</p>
-     {/* <p className='font-semibold m-2'> {icon}</p> */}
      <img src={icon} className='h-6 w-6 m-2' alt="icon" />
     </div>
     </Link>

@@ -13,6 +13,9 @@ import CompletersSection from './components/CompletersSection'
 import FoundersSection from './components/FoundersSection'
 import Footer from './components/Footer'
 import FellowShip from './components/FellowShip'
+import { Button, MovingBorder } from './components/ui/movingBorder'
+import { MovingBorderDemo } from './components/movingBorderDemo'
+import CustomBtn from './components/ui/CustomBtn'
 
 function App() {
   

@@ -12,7 +12,7 @@ const ChallengeSection = () => {
         const allChallenges=res.data.challenges
        
 
-        console.log(res.data.challenges)
+        
         const filteredChallenges=allChallenges.filter((eachChallenge)=>{
             return(
                 eachChallenge.status ==true
@@ -28,7 +28,7 @@ const ChallengeSection = () => {
    }
     fetchChallenges()
    },[])
-console.log(challenges)
+
 
   return (
     <div id="challenge">
