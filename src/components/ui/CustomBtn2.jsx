@@ -20,7 +20,7 @@ const CustomBtn2 = (props) => {
 
   return (
     <div className="flex items-center justify-center animate-fade-up perspective-[1000px] animate-duration-[600ms] animate-delay-[50ms]">
-      <Link to={path} duration={600} smooth={true}>
+     
         <div
           className={`relative w-auto max-w-sm rounded-lg p-[1px] ease-in-out cursor-pointer transition-all duration-400`}
           onMouseMove={handleMouseMove}
@@ -39,7 +39,7 @@ const CustomBtn2 = (props) => {
            
           </div>
         </div>
-      </Link>
+      
 
       <style>
         {`
