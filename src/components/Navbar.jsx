@@ -24,8 +24,10 @@ const Navbar = () => {
   <Link to='howtowin' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>How To Win</Link>
   <Link to='founders' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>Mentor Network</Link>
   
-</div>
-  <CustomBtn2 text="Apply For Fellowship" path='challenge' />
+</div  >
+  <div className=' hidden lg:block'>
+  <CustomBtn2 text="Apply For Fellowship" path='challenge'   />
+  </div>
   </div>
 
 

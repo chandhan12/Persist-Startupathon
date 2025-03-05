@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import CompletersCard from './CompletersCard'
 import axios from 'axios';
+import FloatingCard from './ui/FloatingCard';
+import {motion} from 'framer-motion'
 
 const CompletersSection = () => {
 
@@ -38,17 +40,32 @@ const CompletersSection = () => {
    
    
   return (
-    <div id="completers">
+    <motion.div
+    
+    id="completers">
+      <motion.div
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, delay: 0.3 }}
+      viewport={{ once: false }}
+  
+      >
       <h2 className='text-3xl text-center md:text-5xl m-1 p-1 font-semibold text-white'>Completed Startupathon Challenges</h2>
       <p className='text-slate-300 text-lg font-normal text-center text-wrap'>
         People like you have cracked Startupathon challenges and are now leading thriving startups.
         </p>
-        <div className='flex flex-wrap gap-2 m-4 lg:ml-16 items-center justify-center transition-all duration-150   '>
+        </motion.div>
+        <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        viewport={{ once: false }}
+        className='grid grid-cols-1 md:grid-cols-3 gap-8 m-4 lg:ml-16 items-center justify-center transition-all duration-150   '>
        
         {
             completers.map((completer)=>{
                 return (
-                <CompletersCard key={completer._id}
+                <FloatingCard key={completer._id}
                 project={completer.project} 
                 image={completer.image} profile={completer.profile}
                 position={completer.position}
@@ -63,7 +80,7 @@ const CompletersSection = () => {
 
          
 
-      </div>   
+      </motion.div>   
       {hasMore && (
         <div
           onClick={() => setPage((prev) => prev + 1)}
@@ -72,7 +89,7 @@ const CompletersSection = () => {
           Show More
         </div>
       )}    
-    </div>
+    </motion.div>
   )
 }
 

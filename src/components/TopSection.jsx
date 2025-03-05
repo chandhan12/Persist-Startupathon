@@ -16,21 +16,10 @@ const TopSection = () => {
     </div>
     
     </div>
-    {/*animate-gradient  */}
+    {/*  */}
     <div className='items-center flex flex-col text-white -translate-y-12  md:-translate-y-6 font-bold'>
-        <h2 className=" font-bold text-5xl md:text-8xl bg-gradient-to-r from-purple-700  to-white bg-clip-text text-transparent   animate-fade-right animate-duration-[600ms] animate-delay-[50ms] animate-ease-linear">
-            Startupathon
-        </h2>
-        <h2 className='text-2xl text-center md:text-3xl m-1 p-1 font-semibold animate-fade-right animate-duration-[600ms] animate-delay-[50ms] animate-ease-linear'>Your Chance to Build, Lead, and Succeed as a Founder</h2>
-        <div className=" w-full m-2 h-84 md:h-96 md:w-4/7">
-          <iframe
-            src="https://www.loom.com/embed/996f59a2e5c34fd38b86544833c23dde?sid=dbe496d7-733b-4b11-95df-748e10acf52f"
-            frameBorder="0"
-            allowFullScreen
-            className=" top-0 left-0 w-full h-84 md:h-96 rounded-lg border-purple-600 border animate-fade-up animate-duration-[600ms] animate-delay-[50ms] animate-ease-linear"
-          ></iframe>
-          
-        </div>
+        
+        
       <div className='flex md:flex-row flex-col gap-10 mt-4'>
       <CustomBtn  path='challenge' text="Ongoing Startupathon" logo="https://cdn.prod.website-files.com/623ae64112adcf772da9687e/6775840568c26049e42dd070_sound-on.png" />
       <CustomBtn  path='guide' text="Startupathon Guide" logo="https://cdn.prod.website-files.com/623ae64112adcf772da9687e/677584067844b40361f47c65_user-guide.png" />

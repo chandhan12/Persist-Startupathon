@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import FounderCard from './FounderCard'
 import axios from 'axios';
+import { HoverEffect } from './HoverEffect';
+import {motion} from 'framer-motion'
 
 const FoundersSection = (props) => {
      const [founders,setFounders]=useState([])
@@ -13,7 +15,7 @@ const FoundersSection = (props) => {
     
             const fetchFounders=async ()=>{
                 try {
-                const response=await axios.get(`https://persiststartupathon-admin.onrender.com/api/admin/founders?page=${page}&limit=4`)
+                const response=await axios.get(`https://persiststartupathon-admin.onrender.com/api/admin/founders?page=${page}&limit=6`)
                 if(isMounted){
                     setFounders((prev)=>
                         page==1 ? response.data.founders : [...prev, ...response.data.founders]
@@ -38,21 +40,23 @@ const FoundersSection = (props) => {
 
 
   return (
-    <div  id="founders">
+    <motion.div 
+    initial={{ opacity: 0, x: 100 }}
+    whileInView={{ opacity: 1, x: 10 }}
+    transition={{ duration: 0.8, delay: 0.3 }}
+    viewport={{ once: false }}
+    id="founders">
       <h2 className='text-2xl text-center text-wrap  md:text-3xl m-1 p-1 font-semibold text-white'>
         By getting accepted you unlock access to our elite founder network.</h2>
         <p className='text-slate-300 text-xl font-normal text-center text-wrap'>
         Join Persist and gain access to our 400+ millionaire and billionaire startup network.
         </p>
-        <div className='flex flex-wrap gap-2 m-4 lg:ml-12 '>
+        <div className='flex flex-wrap items-center justify-center gap-2 m-4 lg:ml-12 '>
         
         {
-            founders.map((founder)=>{
-                return (
-                    <FounderCard name={founder.name} key={founder._id} profilePic={founder.profilePic} position={founder.position} bio={founder.bio} highlights={founder.highlights} />
-                )
+          
 
-            })
+            <HoverEffect items={founders} />
         }
          
         </div>
@@ -64,7 +68,7 @@ const FoundersSection = (props) => {
           Show More
         </div>
       )}  
-    </div>
+    </motion.div>
   )
 }
 
