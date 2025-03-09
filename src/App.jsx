@@ -19,6 +19,7 @@ import RewardsSection from './components/RewardsSection'
 import ChallengeCard from './components/ChallengeCard'
 import GuideSection2 from './components/GuideSection2'
 import GallerySection from './components/GallerySection'
+import VideoCarousel from './components/HiringSection2'
 
 
 
@@ -36,6 +37,7 @@ function App() {
        <ChallengeSection/>
        <GuideSection2/>
        <GallerySection/>
+       <VideoCarousel/>
         {/* <ConicDiv />  */}
        {/* 
        <RewardsCarousel />
