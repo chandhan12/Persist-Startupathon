@@ -1,64 +1,95 @@
-import WaterDropGrid from "./ui/WaterDropGrid";
-import {motion} from 'framer-motion'
+import CustomButton from "./Ui/CustomButton";
+import Thorus2 from "../assets/Thorus2.png";
+import Helix from "../assets/Helix.png";
+import { motion } from "framer-motion";
+import NeonCard from "./Ui/NeonCard";
 
 const HeroSection = () => {
-    return (
-        <div className="relative w-full h-screen flex flex-col items-center  mt-12 text-white overflow-hidden">
-            <div className="absolute inset-0  ">
-                <WaterDropGrid />
-            </div>
-            
-            <div className="flex justify-center relative mt-44 -translate-y-40 ">
-            <img
-                className="h-56 md:h-80 w-full md:w-4/5 grayscale opacity-80"
-                src="https://cdn.prod.website-files.com/623ae64112adcf772da9687e/66b7a9b742a15fc71db053f3_pv%20team%20cropped.png"
-                alt=""
-            />
+  return (
+    <>
+      {/* Floating Image at the Top */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{
+          opacity: 1,
+          y: [0, -15, 0],
+          transition: {
+            y: { duration: 3.0, repeat: Infinity, ease: "easeInOut", delay: 0.2 },
+            opacity: { duration: 0.8, ease: "easeOut" },
+          },
+        }}
+        className="absolute top-12 md:top-10 left-0"
+      >
+        <img src={Thorus2} alt="Floating Top Element" className="h-28 w-28 md:w-32 md:h-48" />
+      </motion.div>
 
-
-            <div className="absolute inset-0 w-full md:w-4/5"></div>
-
-
-            <div className="absolute h-14 bottom-0 w-full md:w-4/5 bg-[#0a0112] rounded-lg opacity-95 text-white text-center p-3"></div>
+        <div className="absolute top-28 right-7 ">
+        <NeonCard />
         </div>
+      <div className="flex relative justify-center flex-col items-center mt-28  mx-1 md:mx-0">
+        <div className="relative bg-[#362c32] h-auto w-auto md:w-[1400px] md:h-[550px] pb-12 md:pb-1 flex flex-col items-center pt-15 md:pt-28 rounded-4xl border border-purple-600">
+      
+          <div className="absolute top-0 w-full h-28 bg-gradient-to-b from-black/40 to-transparent rounded-t-4xl"></div>
 
+         
+          <h2 className="text-white text-3xl md:text-6xl font-sans font-semibold mx-1 md:m-2">
+            Your Chance to{" "}
+            <span className="bg-gradient-to-r from-purple-400 to-purple-500 text-transparent bg-clip-text font-bold">
+              Build, Lead,
+            </span>{" "}
+            <br />
+          </h2>
+          <h2 className="text-white text-3xl md:text-6xl font-sans font-semibold m-1 md:m-2">
+            and{" "}
+            <span className="bg-gradient-to-r from-purple-400 to-purple-500 text-transparent bg-clip-text font-bold">
+              Succeed
+            </span>{" "}
+            as a Founder
+          </h2>
+          <div className="md:w-2/3 w-auto m-2">
+            <p className="text-white text-center text-sm md:text-lg">
+              Join a thriving community of innovators and leaders. Whether you're launching your startup or scaling
+              your vision, Creatthion empowers you with tools, resources, and connections to turn ideas into reality.
+            </p>
+          </div>
+          <div className="m-2">
+            <CustomButton text="Start your Journey" icon="🚀" height={10} path="challenge" />
+          </div>
 
-            
-                <div className="relative z-10 text-center flex flex-col items-center -translate-y-40 ">
-                <motion.h2
-                initial={{ opacity: 0, x: -80 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="font-bold text-5xl md:text-8xl bg-gradient-to-r from-purple-700 to-white bg-clip-text text-transparent animate-gradient"
-              >
-                Startupathon
-              </motion.h2>
-
-
-              <motion.h2
-                initial={{ opacity: 0, x: -80 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }} 
-                className="text-2xl text-center md:text-3xl m-1 p-1 font-semibold"
-              >
-        Your Chance to Build, Lead, and Succeed as a Founder
-      </motion.h2>
-                <motion.div
-                  initial={{ opacity: 0, x: -80 }} 
-                  animate={{ opacity: 1, x: 0 }} 
-                  transition={{ duration: 0.8, ease: "easeOut" }} 
-                  className=""
-                >
-                  <p className="text-md mt-8 text-slate-200">Embrace the challenge, push your limits, and turn your ideas into reality <br />Because greatness begins outside your comfort zone!</p>
-                </motion.div>
-                
-                
-                
-               
-            </div>
-            
+         
         </div>
-    );
+        <div className="bg-white rounded-3xl h-56 w-64 md:h-[450px] md:w-[900px] relative -translate-y-10 md:-translate-y-30">
+          
+        <iframe
+          src="https://www.loom.com/embed/996f59a2e5c34fd38b86544833c23dde?sid=dbe496d7-733b-4b11-95df-748e10acf52f"
+          frameBorder="0"
+          allowFullScreen
+          className="top-0 left-0 w-full h-full md:h-full rounded-3xl border-purple-600 border animate-fade-up animate-duration-[400ms] animate-delay-[30ms] animate-ease-linear"
+        ></iframe>
+           </div>
+       
+
+       
+        <div className="">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{
+            opacity: 1,
+            y: [0, -15, 0],
+            transition: {
+              y: { duration: 3.0, repeat: Infinity, ease: "easeInOut", delay: 0.2 },
+              opacity: { duration: 0.8, ease: "easeOut" },
+            },
+          }}
+          className="absolute top-52 right-0 md:right-1 -translate-y-1 md:translate-y-30"
+        >
+          <img src={Helix} className="md:h-80 h-48" alt="Floating Bottom Element" />
+        </motion.div>
+        </div>
+       
+      </div>
+    </>
+  );
 };
 
 export default HeroSection;

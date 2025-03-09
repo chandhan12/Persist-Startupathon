@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-scroll'
 import { navIcon } from '../icons'
-import CustomBtn2 from './ui/CustomBtn2'
+import CustomBtn2 from './ui(old)/CustomBtn2'
+import CustomButton from './Ui/CustomButton'
 
 
 const Navbar = () => {
@@ -12,21 +13,21 @@ const Navbar = () => {
   }
   return (
     <div className='transition-all duration-300'>
-    <div id='nav' className='h-20 w-full px-10 flex justify-between items-center fixed top-0 left-0 bg-black z-50'>
+    <div id='nav' className='h-20 w-full px-10 flex justify-between items-center fixed top-0 left-0  z-50'>
   <div>
     <img className="h-36 w-36" src="https://cdn.prod.website-files.com/623ae64112adcf772da9687e/678a14a9d3a398bc1e9633b3_Persist%20Startupathon%20White.svg" alt="Logo" />
   </div>
   <div className='flex'>
   <div className='p-2 text-white hidden lg:block '>
-  <Link to='challenge' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>Ongoing Startupathon</Link>
-  <Link to='completers' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>Completed Startupathon</Link>
-  <Link to='guide' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>Startupathon Guide</Link>
-  <Link to='howtowin' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>How To Win</Link>
-  <Link to='founders' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>Mentor Network</Link>
+  <Link to='challenge' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Ongoing Startupathon</Link>
+  <Link to='completers' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Completed Startupathon</Link>
+  <Link to='guide' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Startupathon Guide</Link>
+  <Link to='howtowin' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>How To Win</Link>
+  <Link to='founders' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Mentor Network</Link>
   
 </div  >
-  <div className=' hidden lg:block'>
-  <CustomBtn2 text="Apply For Fellowship" path='challenge'   />
+  <div className=' hidden lg:block ml-10'>
+  <CustomButton text="Apply for Fellowship" path='challenge' icon='🚀' height={8}  />
   </div>
   </div>
 

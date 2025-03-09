@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import CustomBtn from "./ui/CustomBtn";
+import CustomBtn from "./ui(old)/CustomBtn";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 const LoomVid = () => {

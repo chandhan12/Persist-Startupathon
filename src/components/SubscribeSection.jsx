@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useRef, useState } from 'react'
 import {motion} from 'framer-motion'
-import CustomBtn2 from './ui/CustomBtn2'
+import CustomBtn2 from './ui(old)/CustomBtn2'
 
 const SubscribeSection = () => {
 
@@ -78,13 +78,13 @@ const SubscribeSection = () => {
                 subscribed == true ? <div className=' h-auto p-2  md:h-22 m-3 w-auto md:w-2/3 bg-[#0a0111] shadow-[0px_0px_10px_#432d7b] opacity-60 border border-purple-600 rounded-lg flex flex-col item-center text-white'>
                     <h2 className='text-center'>Thank You</h2>
                     <p className='text-center'>We'll notify you as soon as a new Startupathon challenge is added.</p>
-                </div> : <form onSubmit={handleSubscribe}><div className='flex md:flex-row flex-col justify-center gap-2'>
+                </div> : <div className='flex md:flex-row flex-col justify-center gap-2'>
                 <input type="email" ref={emailRef} required className='w-72 text-white mb-2  p-3 rounded-lg border border-purple-700 h-10 bg-[#0a0111]  placeholder-slate-500' placeholder='Enter You Email ID' />
-                <div  className=' cursor-pointer text-white rounded-lg   '>
+                <div onClick={handleSubscribe}  className=' cursor-pointer text-white rounded-lg   '>
                     <CustomBtn2 text="Subscribe" />
                 </div>
             </div>
-            </form>
+           
             }
 
         </div>

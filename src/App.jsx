@@ -13,7 +13,12 @@ import LoomVid from './components/LoomVid'
 
 import TimeLine from './components/TimeLine'
 import RewardsCarousel from './components/RewardsCaurosal'
-import ConicDiv from './components/ui/ConicDiv'
+import ConicDiv from './components/ui(old)/ConicDiv'
+import NeonCard from './components/Ui/NeonCard'
+import RewardsSection from './components/RewardsSection'
+import ChallengeCard from './components/ChallengeCard'
+import GuideSection2 from './components/GuideSection2'
+import GallerySection from './components/GallerySection'
 
 
 
@@ -26,15 +31,21 @@ function App() {
       <div className=''>
         <Navbar/>
         <HeroSection />
-       <LoomVid/>
+        <RewardsSection />
+
+       <ChallengeSection/>
+       <GuideSection2/>
+       <GallerySection/>
+        {/* <ConicDiv />  */}
+       {/* 
        <RewardsCarousel />
         <ChallengeSection/>
         <TimeLine/>
         <HiringProcessSection/>
-        <ConicDiv /> 
+       
         <CompletersSection />
         <FoundersSection />
-        <SubscribeSection />
+        <SubscribeSection /> */}
         <Footer/>
        </div>
        </>

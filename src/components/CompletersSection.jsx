@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CompletersCard from './CompletersCard'
 import axios from 'axios';
-import FloatingCard from './ui/FloatingCard';
+import FloatingCard from './ui(old)/FloatingCard';
 import {motion} from 'framer-motion'
 
 const CompletersSection = () => {

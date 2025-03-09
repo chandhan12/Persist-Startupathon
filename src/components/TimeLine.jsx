@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import ScrollTracker from "./ui/ScrollTracker";
+import ScrollTracker from "./ui(old)/ScrollTracker";
 
 function TimeLine() {
   const timeLineRef = useRef(null);

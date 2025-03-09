@@ -16,3 +16,7 @@ export const rightArrowIcon=<svg xmlns="http://www.w3.org/2000/svg" fill="none" 
 export const leftArrowIcon=<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  stroke="currentColor" className="size-8 transition-all duration-200 hover:-translate-y-1.5 hover:text-purple-600">
 <path  d="M15.75 19.5 8.25 12l7.5-7.5" />
 </svg>
+
+export const exlametaryIcon=<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  stroke="currentColor" className="size-4 text-white font-semibold">
+<path  d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+</svg>
