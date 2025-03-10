@@ -24,6 +24,8 @@ import { InfiniteMovingCardsDemo } from './components/MovingCards'
 import ProjectCarousel from './components/ProjectCaurosal'
 
 import FellowshipCard from './components/FellowshipCard'
+import FoundersProject from './components/FounderProject'
+import DoubleDiv from './components/doubleDiv'
 
 
 
@@ -46,6 +48,10 @@ function App() {
        <ProjectCarousel/>
        
        <FellowshipCard/>
+       <FoundersProject/>
+
+       {/* <SubscribeSection /> */}
+       <DoubleDiv />
        {/* <InfiniteCarousel/> */}
         {/* <ConicDiv />  */}
        {/* 

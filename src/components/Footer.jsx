@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='bg-black pb-2 h-auto w-full flex justify-center items-center gap-2'>
+    <div className='bg-gradient-to-b from-[#2F2F2F00] to-[#01010140] pb-2 h-auto w-full flex justify-center items-center gap-2'>
        <div className='flex md:flex-row flex-col gap-10 p-2 '>
        <div className='w-auto cursor-pointer ml-12'>
             <img className='h-44 w-60' src='https://cdn.prod.website-files.com/623ae64112adcf772da9687e/678a14a9d3a398bc1e9633b3_Persist%20Startupathon%20White.svg' alt="" />
