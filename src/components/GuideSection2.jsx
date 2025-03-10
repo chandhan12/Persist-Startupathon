@@ -26,13 +26,13 @@ const GuideSection2 = () => {
       <span className="bg-gradient-to-r from-purple-400 to-purple-500 text-transparent bg-clip-text font-bold">
         idea
       </span>{" "}
-      that matches yourr skills?
+      that matches your skills?
       <br />
     </h2>
    
     <div className="md:w-2/3 w-auto m-2">
       <p className="text-white text-center text-sm md:text-lg m-4">
-        Here's a simple guide on how the Startupathon process works once you find a project that suits youe skills. <br />
+        Here's a simple guide on how the Startupathon process works once you find a project that suits your skills. <br />
        
       </p>
     </div>

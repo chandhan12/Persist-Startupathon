@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 
 const VideoCarousel = () => {
   const videos = [
-    "https://www.youtube.com/embed/NxLdl4ijrN0?si=AztvLfiYvVqOc0zN", // Main video
-    "https://www.youtube.com/embed/qaeHKoq_CLM?si=IGgv9PdJXvc2kozV"  // Swappable video
+     // Main video
+    "https://www.youtube.com/embed/pn_HoowYNTQ?si=HslG5hI4xqWCwtw_" ,
+    "https://www.loom.com/embed/0847b9257f144fd0830a8536dfbc8e81?sid=a859384c-c000-4971-99c6-6e66db5662ab" // Swappable video
   ];
 
   const [activeVideos, setActiveVideos] = useState(videos);
@@ -16,14 +17,23 @@ const VideoCarousel = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex my-25">
     <div className="relative w-[1400px] h-[400px] p-2  text-white flex items-center overflow-hidden">
       {/* Left Side - Text (Increased Width) */}
       <div className="w-[725px] h-[383px] flex items-center justify-center p-4">
-        <div>
-          <h2 className="text-2xl font-bold">Work Smart, Win Big</h2>
-          <p className="mt-2 text-lg">Pro Tips from Swapnil Sharma, CTO of Ovadrive</p>
-          <p className="mt-1 text-purple-400">(A Startupathon Success)</p>
+        <div className="p-2">
+        <h2 className="text-white text-2xl md:text-[40px] font-sans font-semibold mx-1 md:m-2">
+      Work Smart, Win Big: Pro <br />
+      Tips from Swapnil <br />
+      Sharma, CTO of Ovadrive <br />{" "}
+      <span className="bg-gradient-to-r from-purple-400 to-purple-500 text-transparent bg-clip-text font-bold">
+        (A Startupathon <br/>
+        Success)
+      </span>{" "}
+     
+      <br />
+    </h2>
+  
         </div>
       </div>
 
@@ -51,9 +61,10 @@ const VideoCarousel = () => {
       {/* Right - Clickable Swappable Video (Ensuring Persistent Opacity) */}
      
     </div>
+    <div className="flex items-center">
      <motion.div
-     className={`absolute right-0 w-[5%] h-[52%] flex items-center border border-purple-600 rounded-xl transition-opacity duration-300 ${
-       isSwapped ? "opacity-60" : "opacity-20"
+     className={`absolute right-0 w-[5%] h-[50%] flex items-center border border-purple-600 rounded-xl transition-opacity duration-300 ${
+       isSwapped ? "opacity-60" : "opacity-40"
      } hover:opacity-60`}
      key={activeVideos[1]}
      initial={{ x: 50, scale: 0.9 }}
@@ -62,7 +73,7 @@ const VideoCarousel = () => {
      transition={{ duration: 0.8 }}
      layout
    >
-     <div className="w-full h-full overflow-hidden relative">
+     <div className="w-full h-full  overflow-hidden relative">
        <iframe
          className="w-full h-full rounded-lg shadow-md"
          src={activeVideos[1]}
@@ -79,6 +90,7 @@ const VideoCarousel = () => {
        ></div>
      </div>
    </motion.div>
+   </div>
    </div>
   );
 };

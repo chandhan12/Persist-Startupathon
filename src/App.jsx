@@ -20,6 +20,10 @@ import ChallengeCard from './components/ChallengeCard'
 import GuideSection2 from './components/GuideSection2'
 import GallerySection from './components/GallerySection'
 import VideoCarousel from './components/HiringSection2'
+import { InfiniteMovingCardsDemo } from './components/MovingCards'
+import ProjectCarousel from './components/ProjectCaurosal'
+import FellowshipCard from './components/FelloshipCard'
+
 
 
 
@@ -38,6 +42,9 @@ function App() {
        <GuideSection2/>
        <GallerySection/>
        <VideoCarousel/>
+       <ProjectCarousel/>
+       <FellowshipCard/>
+       {/* <InfiniteCarousel/> */}
         {/* <ConicDiv />  */}
        {/* 
        <RewardsCarousel />
