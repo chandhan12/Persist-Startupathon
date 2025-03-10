@@ -133,11 +133,11 @@ const ProjectCarousel = () => {
         <NeonCard2 />
         <NeonCard3 />
         </div>
-        <div className="absolute bottom-0 translate-y-40 right-8 z-20">
+        <div className="absolute bottom-0 translate-y-20 right-8 z-20">
         <NeonCard2 />
         <NeonCard3 />
         </div>
-        <div className="absolute bottom-0 left-[40%] translate-y-40 right-8 z-20">
+        <div className="absolute bottom-0 left-[40%] translate-y-20 right-8 z-20">
         <NeonCard2 />
         <NeonCard3 />
         </div>
@@ -149,7 +149,7 @@ const ProjectCarousel = () => {
         <NeonCard2 />
         <NeonCard3 />
         </div>
-        <div className="absolute  bottom-0 translate-y-40 left-8 z-20">
+        <div className="absolute  bottom-0 translate-y-20 left-8 z-20">
         <NeonCard2 />
         <NeonCard3 />
         </div>
