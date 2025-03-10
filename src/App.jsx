@@ -26,6 +26,10 @@ import ProjectCarousel from './components/ProjectCaurosal'
 import FellowshipCard from './components/FellowshipCard'
 import FoundersProject from './components/FounderProject'
 import DoubleDiv from './components/doubleDiv'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Layout from './components/Layout'
+import HomePage from './pages/HomePage'
+import FellowShipPage from './pages/FellowShipPage'
 
 
 
@@ -35,37 +39,14 @@ function App() {
   
 
   return (
-    <>
-      <div className=''>
-        <Navbar/>
-        <HeroSection />
-        <RewardsSection />
-
-       <ChallengeSection/>
-       <GuideSection2/>
-       <GallerySection/>
-       <VideoCarousel/>
-       <ProjectCarousel/>
-       
-       <FellowshipCard/>
-       <FoundersProject/>
-
-       {/* <SubscribeSection /> */}
-       <DoubleDiv />
-       {/* <InfiniteCarousel/> */}
-        {/* <ConicDiv />  */}
-       {/* 
-       <RewardsCarousel />
-        <ChallengeSection/>
-        <TimeLine/>
-        <HiringProcessSection/>
-       
-        <CompletersSection />
-        <FoundersSection />
-        <SubscribeSection /> */}
-        <Footer/>
-       </div>
-       </>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Layout/>}>
+      <Route path='/' element={<HomePage/>} />
+      <Route path='/fellowship' element={<FellowShipPage/>} />
+      </Route>
+    </Routes>
+    </BrowserRouter>
   )
 }
 
