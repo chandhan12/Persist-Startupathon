@@ -30,6 +30,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import HomePage from './pages/HomePage'
 import FellowShipPage from './pages/FellowShipPage'
+import CompletedPage from './pages/CompletedPage'
+import ChallengePage from './pages/ChallengePage'
 
 
 
@@ -44,6 +46,8 @@ function App() {
       <Route path='/' element={<Layout/>}>
       <Route path='/' element={<HomePage/>} />
       <Route path='/fellowship' element={<FellowShipPage/>} />
+      <Route path='/completed/:completedId' element={<CompletedPage/>} />
+      <Route path='/challenge/:challengeId' element={<ChallengePage/>} />
       </Route>
     </Routes>
     </BrowserRouter>

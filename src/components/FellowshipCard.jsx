@@ -29,7 +29,7 @@ const FellowshipCard = () => {
       {/* Parallelogram Card (Above Neon Card) */}
       <div 
         className="relative w-[1200px] h-[380px] flex flex-col rounded-xl items-center pt-24 overflow-hidden my-20 shadow-lg backdrop-brightness-150 z-10" 
-        style={{ backgroundImage: `url(${parallelogram2})`, backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{ backgroundImage: `url(${parallelogram2})`, backgroundPosition: "center" }}
       >
         <h2 className='text-4xl text-white font-semibold'>Got an Idea of Your Own? Let's</h2>
         <h2 className='text-4xl text-white font-semibold'>Make It Happen!</h2>

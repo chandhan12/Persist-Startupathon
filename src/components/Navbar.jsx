@@ -3,10 +3,13 @@ import { Link } from 'react-scroll'
 import { navIcon } from '../icons'
 import CustomBtn2 from './ui(old)/CustomBtn2'
 import CustomButton from './Ui/CustomButton'
+import { useNavigate } from 'react-router-dom'
+
 
 
 const Navbar = () => {
   const [openNav,setOpenNav]=useState(false)
+  const navigate=useNavigate()
 
   const openTopBar=()=>{
     setOpenNav(!openNav)
@@ -49,7 +52,8 @@ const Navbar = () => {
   <Link to='guide' duration={600} smooth={true} className=' hover:text-white text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>Startupathon Guide</Link>
 
   <Link to='founders' duration={600} smooth={true} className=' hover:text-white text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>Mentor Network</Link>
-  <button className='w-[200px] h-10 rounded-lg text-center p-1 mb-4 bg-purple-800 hover:bg-purple-600 transition-all duration-400 cursor-pointer shadow-[0_0_15px_rgba(138,43,226,0.9)] text-white text-md font-semibold'>Apply For Fellowship</button>
+  
+  <button onClick={navigate('/fellowship')} className='w-[200px] h-10 rounded-lg text-center p-1 mb-4 bg-purple-800 hover:bg-purple-600 transition-all duration-400 cursor-pointer shadow-[0_0_15px_rgba(138,43,226,0.9)] text-white text-md font-semibold'>Apply For Fellowship</button>
 
   </div>
 }
