@@ -13,6 +13,9 @@ import NeonCard4 from '../components/Ui/NeonCard4';
 const CompletedPage = () => {
     const { completedId } = useParams();
     const [completed, setCompleted] = useState(null);
+
+
+    
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
