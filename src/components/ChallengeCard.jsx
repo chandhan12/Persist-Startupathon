@@ -1,8 +1,15 @@
 import React from 'react'
 import { exlametaryIcon } from '../icons'
+import { useNavigate } from 'react-router-dom'
 
 const ChallengeCard = (props) => {
-    const {title,image,funding,description,deadline}=props
+    const {title,image,funding,description,deadline,id}=props
+
+    const navigate=useNavigate()
+
+    const handleNav=()=>{
+      navigate(`/challenge/${id}`)
+    }
   return (
    <div className=' bg-[#2B2B2B] h-[500px] w-[356px]  rounded-4xl border border-purple-600 flex flex-col m-1    items-center '>
       <img className='h-28 w-35 m-2' src={image} alt={title} />
@@ -13,7 +20,7 @@ const ChallengeCard = (props) => {
       </div>
       <p className='text-white text-md text-wrap mx-5 my-3 '>{description}</p>
 
-      <button className='h-[40px] w-[308px] bottom-5 m-3 bg-gradient-to-b from-[#AE98E7] to-[#805ED9] rounded-xl text-white  text-lg'>
+      <button onClick={handleNav} className='h-[40px] w-[308px] cursor-pointer bottom-5 m-3 bg-gradient-to-b from-[#AE98E7] to-[#805ED9] rounded-xl text-white  text-lg'>
         View Details
       </button>
       <div className=' flex p-1 text-center bottom-2  text-md m-2 text-white text-wrap'><span><img className='h-5 w-5' src="https://cdn.prod.website-files.com/623ae64112adcf772da9687e/678a08bb798234106f88d71f_burning.png" alt="" /></span>Deadline approaching apply by: {deadline}</div>

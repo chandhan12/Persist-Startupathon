@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { AlertCircle } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const ProjectCard = ({ project }) =>{
 const navigate=useNavigate()
@@ -14,6 +14,7 @@ const handleCompleter=()=>{
 
   
   return (
+   
   <div className="w-[413px] h-[380px] flex-shrink-0 mx-4 border bg-blend-saturation border-purple-700 bg-gradient-to-r from-[#333150] to-[#39334a] rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]">
     <div className="flex gap-3 justify-center m-5 items-center">
       <img src={project.image} className="h-10 w-10" alt={project.project} />

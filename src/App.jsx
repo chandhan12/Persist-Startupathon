@@ -32,6 +32,7 @@ import HomePage from './pages/HomePage'
 import FellowShipPage from './pages/FellowShipPage'
 import CompletedPage from './pages/CompletedPage'
 import ChallengePage from './pages/ChallengePage'
+import FounderPage from './pages/FounderPage'
 
 
 
@@ -48,6 +49,7 @@ function App() {
       <Route path='/fellowship' element={<FellowShipPage/>} />
       <Route path='/completed/:completedId' element={<CompletedPage/>} />
       <Route path='/challenge/:challengeId' element={<ChallengePage/>} />
+      <Route path='/founder/:founderId' element={<FounderPage/>} />
       </Route>
     </Routes>
     </BrowserRouter>

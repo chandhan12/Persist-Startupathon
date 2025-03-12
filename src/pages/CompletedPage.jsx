@@ -20,13 +20,11 @@ const CompletedPage = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const controller = new AbortController();
+        
         const fetchCompleted = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get(`http://localhost:3000/api/admin/completed/${completedId}`, {
-                    signal: controller.signal,
-                });
+                const response = await axios.get(`http://localhost:3000/api/admin/completed/${completedId}`);
                 setCompleted(response.data.item);
             } catch (err) {
                 if (!axios.isCancel(err)) {
@@ -38,7 +36,7 @@ const CompletedPage = () => {
         };
 
         fetchCompleted();
-        return () => controller.abort();
+        
     }, [completedId]);
 
     if (loading) return <p className="text-center text-white">Loading...</p>;

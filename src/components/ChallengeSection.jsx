@@ -101,6 +101,7 @@ const ChallengeSection = () => {
             funding={challenge.funding}
             description={challenge.description}
             deadline={challenge.deadline}
+            id={challenge._id}
           />
         ))}
       </motion.div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 
 function FoundersProject() {
@@ -8,6 +9,7 @@ function FoundersProject() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate=useNavigate()
 
 useEffect(()=>{
     const fetchFounders=async ()=>{
@@ -24,6 +26,7 @@ useEffect(()=>{
     fetchFounders()
 },[])
 
+
 useEffect(() => {
     if (founders.length === 0) return;
 
@@ -39,6 +42,11 @@ useEffect(() => {
 const currentFounder = founders[currentIndex]
 
 
+const handleNav=()=>{
+
+  navigate(`/founder/${currentFounder._id}`)
+
+}
 if (isLoading) {
     return (
       <div className="  flex items-center justify-center">
@@ -106,7 +114,7 @@ return (
                     <p className="text-center text-sm text-white">{currentFounder.position}</p>
                 </div>
             </div>
-            <button className="w-[257px] h-[40px] bg-gradient-to-b from-[#AE98E7] to-[#805ED9] rounded-xl text-white mt-5 cursor-pointer">View Details</button>
+            <button onClick={handleNav} className="w-[257px] h-[40px] bg-gradient-to-b from-[#AE98E7] to-[#805ED9] rounded-xl text-white mt-5 cursor-pointer">View Details</button>
           </motion.div>
         )}
       </AnimatePresence>
