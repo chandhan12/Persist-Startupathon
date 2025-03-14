@@ -65,7 +65,7 @@ const FounderPage = () => {
     <div className='mx-10'>
     <h2 className="text-[#FFFFFF] text-2xl md:text-3xl font-sans font-semibold mx-1 md:m-2">
       Learn from {founder.name} :{" "}
-      <span className="bg-gradient-to-r from-purple-400 to-purple-500 text-transparent bg-clip-text font-bold">
+      <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text font-bold">
         Insights & Expertise
       </span>{" "}
       
@@ -107,7 +107,7 @@ const FounderPage = () => {
                 </p>
             </div>
         </div>
-        <div class="w-full border-t border-neutral-600"></div>
+        <div class="w-full border-t  border-neutral-600"></div>
         <div className='h-[550px] w-[1298px] mt-10 flex flex-col gap-4 '>
         <div className='flex flex-col gap-3'>
                 <p className='text-[15px]'>Primary location</p>

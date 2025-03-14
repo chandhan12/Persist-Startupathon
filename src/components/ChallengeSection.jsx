@@ -3,6 +3,7 @@ import ChallengeCard from "./ChallengeCard";
 import axios from "axios";
 import { motion } from "framer-motion";
 import spheres from "../assets/Spheres1.png";
+import invertedTube from '../assets/invertedTube.svg'
 import NeonCard2 from "./Ui/NeonCard2";
 import NeonCard3 from "./Ui/NeonCard3";
 
@@ -43,21 +44,9 @@ const ChallengeSection = () => {
     : challenges.slice(0, mobileScreen ? 4 : 6); // Show 4 on mobile, 6 on desktop
 
   return (
-    <div id="challenge" className="relative mt-5">
+    <div id="challenge" className="relative mt-20">
       {/* Top-right floating spheres image */}
-      <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{
-        opacity: 1,
-        y: [0, -10, 0],
-        transition: {
-          y: { duration: 3.0, repeat: Infinity, ease: "easeInOut", delay: 0.1 },
-          opacity: { duration: 0.8, ease: "easeOut" },
-        },
-      }}
-      className="absolute top-0 right-0 -translate-y-30">
-        <img src={spheres} className="h-72 w-96" alt="Decorative spheres" />
-      </motion.div>
+      
       <div  className="absolute top-80 right-4 translate-y-30">
         <NeonCard2/>
         <NeonCard3 />
@@ -118,6 +107,11 @@ const ChallengeSection = () => {
           </button>
         </div>
       )}
+      <motion.div
+      
+      className="absolute top-[5px] left-[1180px] opacity-[50%] ">
+        <img src={invertedTube} className="h-[414px] w-[667px]" alt="Decorative spheres" />
+      </motion.div>
     </div>
   );
 };

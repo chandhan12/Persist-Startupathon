@@ -15,7 +15,7 @@ const ChallengeCard = (props) => {
       <img className='h-28 w-35 m-2' src={image} alt={title} />
       <h2 className='text-white m-3 text-center font-bold text-2xl'>{title}</h2>
       <div className='h-8 w-34 rounded-lg p-2 m-3 flex flex-row justify-center items-center  border border-neutral-400 bg-gradient-to-b from-neutral-600 to-[#1f1f1f] '>
-         <p className='text-white font-semibold text-md mx-auto'>IFO : ${funding} </p>
+         <p className='text-[#4EB400] font-semibold text-md mx-auto'>IFO : ${funding} </p>
          <p className='text-white font-semibold'>{exlametaryIcon}</p>
       </div>
       <p className='text-white text-md text-wrap mx-5 my-3 '>{description}</p>

@@ -16,7 +16,7 @@ const Navbar = () => {
   }
   return (
     <div className='transition-all duration-300'>
-    <div id='nav' className='h-20 w-full px-10 flex justify-between items-center fixed top-0 left-0  z-50'>
+    <div id='nav' className='h-[80px] w-full px-10 flex bg-[#0A0A0A] justify-between items-center fixed top-0 left-0  z-50'>
   <div>
     <img className="h-36 w-36" src="https://cdn.prod.website-files.com/623ae64112adcf772da9687e/678a14a9d3a398bc1e9633b3_Persist%20Startupathon%20White.svg" alt="Logo" />
   </div>

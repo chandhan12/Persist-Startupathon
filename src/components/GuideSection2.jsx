@@ -1,25 +1,18 @@
 import React from 'react'
-import image1 from '../assets/Illustration.png'
-import spheres2 from '../assets/Spheres2.png'
+import image1 from '../assets/image1.png'
+import Wavebg from '../assets/Wavebg.svg'
 import {motion} from 'framer-motion'
+import ProcessSteps from './CardsInView'
 
 const GuideSection2 = () => {
   return (
     <div className='flex flex-col items-center p-4 relative '>
 
     <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{
-          opacity: 1,
-          y: [0, -8, 0],
-          transition: {
-            y: { duration: 3.0, repeat: Infinity, ease: "easeInOut", delay: 0.1 },
-            opacity: { duration: 0.8, ease: "easeOut" },
-          },
-        }}
-        className="absolute left-0 -translate-y-8"
+        
+        className="absolute left-[-129px] top-0 -translate-y-30 opacity-[50%]"
       >
-        <img src={spheres2} alt="Floating Top Element" className="h-28 w-28 md:w-56 md:h-52" />
+        <img src={Wavebg} alt="Floating Top Element" className="h-[321px] w-[327px] opacity-[50%]" />
       </motion.div>
         <h2 className="text-white text-2xl md:text-5xl m-2 font-sans font-semibold mx-1 md:m-4">
       Found an{" "}
@@ -36,7 +29,15 @@ const GuideSection2 = () => {
        
       </p>
     </div>
-    <div className='flex md:flex-row flex-col gap-15 justify-center items-center p-4'>
+    <ProcessSteps/>
+    </div>
+  )
+}
+
+export default GuideSection2
+
+/*
+ <div className='flex md:flex-row flex-col gap-15 justify-center items-center p-4'>
         <div className='h-[400px] w-[400px]'>
             <img src={image1} alt='image1' className='h-full w-full' />
         </div>
@@ -49,9 +50,4 @@ const GuideSection2 = () => {
             </div>
        
     </div>
-        <p className='text-white hover:cursor-pointer hover:text-green-600'>See more!</p>
-    </div>
-  )
-}
-
-export default GuideSection2
+        */

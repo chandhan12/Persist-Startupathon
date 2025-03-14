@@ -3,6 +3,7 @@ import parallelogram2 from "../assets/parallelogram2.png";
 import Icosahedron from "../assets/Icosahedron.png";
 import NeonCard3 from "./Ui/NeonCard3";
 import NeonCard2 from "./Ui/NeonCard2";
+import warmhole2 from '../assets/warmhole2.svg'
 
 const FellowshipCard = () => {
   return (
@@ -41,6 +42,9 @@ const FellowshipCard = () => {
           </p>
         </div>
         <button className="bg-white mt-8 w-[223px] h-[42px] text-purple-600 rounded-xl font-semibold cursor-pointer">Apply for Fellowship 🚀</button>
+      </div>
+      <div className="absolute right-0 w-[400px] h-[400px] top-0">
+        <img src={warmhole2} alt="warmhole" className="w-[580px] h-[485px]  " />
       </div>
     </div>
   );

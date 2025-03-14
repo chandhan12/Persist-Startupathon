@@ -5,6 +5,8 @@ import {motion} from 'framer-motion'
 import variant3 from '../assets/variant3.png'
 import NeonCard2 from './Ui/NeonCard2';
 import NeonCard3 from './Ui/NeonCard3';
+import tube from '../assets/tube.png'
+import SlideUpTextWrapper from '../componentPrac/SlideUpText';
 
 const perks=[
   {
@@ -104,41 +106,21 @@ const RewardsSection = () => {
         ))}
       </div>
     ) : (
-      <div className='mb-20'>
+      <div className='mt-30'>
      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{
-          opacity: 1,
-          y: [0, -15, 0],
-          transition: {
-            y: { duration: 3.0, repeat: Infinity, ease: "easeInOut", delay: 0.1 },
-            opacity: { duration: 0.8, ease: "easeOut" },
-          },
-        }}
-        className="absolute left-0 -translate-y-20"
+        
+        className="absolute -left-[340px] -translate-y-20 "
       >
-        <img src={variant3} alt="Floating Top Element" className="h-28 w-28 md:w-32 md:h-48" />
+        <img src={tube} alt="Floating Top Element" className="h-[456px] w-[629px] -left-[284px] opacity-[50%]" />
       </motion.div>
 
      
    <div className='flex flex-col relative justify-center items-center '>
-   <h2 className="text-white text-2xl md:text-5xl font-sans font-semibold mx-1 md:m-2">
-      Startupathon{" "}
-      <span className="bg-gradient-to-r from-purple-400 to-purple-500 text-transparent bg-clip-text font-bold">
-        Success
-      </span>{" "}
-      Comes with
-      <br />
-    </h2>
-    <h2 className="text-white text-2xl md:text-5xl font-sans font-semibold m-1 md:m-2">
-      
-      <span className="bg-gradient-to-r from-purple-400 to-purple-500 text-transparent bg-clip-text font-bold">
-       Extraordinary Rewards
-      </span>{" "}
-     
-    </h2>
+ <div className='h-[136px] m-2'>
+ <SlideUpTextWrapper/>
+ </div>
     <div className="md:w-2/3 w-auto m-2">
-      <p className="text-white text-center text-sm md:text-lg">
+      <p className="text-white text-center m-2 text-sm md:text-lg">
         Unlock unparlled opportunities and exculsive benefits designed to acclerate your startup journey. From funding and <br />
         equity to premium cold credits-your path to success starts here!
       </p>

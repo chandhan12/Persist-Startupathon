@@ -9,6 +9,13 @@ import ProjectCarousel from '../components/ProjectCaurosal'
 import FellowshipCard from '../components/FellowshipCard'
 import FoundersProject from '../components/FounderProject'
 import DoubleDiv from '../components/doubleDiv'
+import CardsInView from '../components/CardsInView'
+import SlideUpText from '../componentPrac/SlideUpText'
+import SlideUpTextWrapper from '../componentPrac/SlideUpText'
+import ProcessSteps from '../components/CardsInView'
+import TeamMarquee from '../componentPrac/TeamMarquee'
+
+
 
 const HomePage = () => {
   return (
@@ -26,7 +33,9 @@ const HomePage = () => {
    
    <FellowshipCard/>
    <FoundersProject/>
-
+   
+    
+   
    {/* <SubscribeSection /> */}
    <DoubleDiv />
    {/* <InfiniteCarousel/> */}
