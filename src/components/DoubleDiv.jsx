@@ -30,20 +30,12 @@ const DoubleDiv = () => {
     }
   return (
     <div className=' flex justify-center w-full h-[550px] mt-25 relative'>
-         <div className=' h-[350px] w-[280px] -translate-y-40 absolute top-0 right-[0%]'>
-       <img src={Helixrev} alt="" />
-      </div>
-      <div className=' h-[10px] w-[300px] translate-y-40 absolute  left-[0%]'>
-       <img src={Thorus3} alt="" />
-      </div>
-      <div className='flex h-[10px] w-[300px] -translate-y-30 absolute top-0  left-[40%]'>
-       <NeonCard4/>
-       <NeonCard5 />
-      </div>
-      <div className='flex h-[10px] w-[300px]  absolute bottom-70  left-[40%]'>
-       <NeonCard4/>
-      
-      </div>
+        
+     
+      <div className="absolute bottom-0 left-[932px]  h-[500px] w-[500px] 
+                rotate-[82deg] bg-gradient-to-t from-[#00C2FF] to-[#FF29C3] 
+                opacity-[20%] blur-3xl rounded-full shadow-[0_0_100px_#00C2FF] mix-blend-screen">
+</div>
       
       <div className=' h-[400px] w-[1200px] rounded-xl top-0 right-[10%] absolute '>
        <div className='h-full w-full flex flex-col items-center justify-center  bg-neutral-800 backdrop-brightness-150 rounded-xl'
@@ -70,7 +62,8 @@ const DoubleDiv = () => {
        }
        </div>
       </div>
-     
+      
+
     </div>
   )
 }

@@ -93,8 +93,8 @@ const ChallengePage = () => {
                 <img src={TimeIcon} alt="" />
                <p className='text-white m-2 text-sm'>Deadline apporaching! Appky by <span className='font-bold'>{challenge.deadline}</span></p>
                </div>
-               <div className='h-[38px] w-[620px] bg-[#312c40] rounded-lg flex items-center mt-8 border border-purple-600 px-2'>
-                <p className='text-white m-2 text-sm '>seeing your amazing submissions, we're increasing the funding by $2,500📈-keep innovating!</p>
+               <div className='h-[50px] w-[640px] p-[20px] bg-[#312c40] rounded-lg flex items-center mt-8 border border-purple-600 '>
+                <p className='text-white  text-[14px] font-[500] '>seeing your amazing submissions, we're increasing the funding by $2,500📈-keep innovating!</p>
                </div>
 
                <h2 className="text-white text-2xl md:text-xl m-2 font-sans font-bold  md:my-4">

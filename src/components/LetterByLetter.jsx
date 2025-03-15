@@ -20,7 +20,7 @@ function LetterByLetter() {
   const wordVariants = {
     enter: { 
       opacity: 0,
-      y: 30
+      y: 20
     },
     center: { 
       opacity: 1,

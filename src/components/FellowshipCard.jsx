@@ -12,7 +12,7 @@ const FellowshipCard = () => {
       <img 
         src={Icosahedron} 
         alt="image" 
-        className="w-[161px] h-[161px] absolute -top-3 z-20"
+        className="w-[161px] h-[161px] absolute -top-[1] translate-y-3 z-20"
       />
       
       {/* Neon Card (Behind Parallelogram) */}
@@ -27,12 +27,23 @@ const FellowshipCard = () => {
         <NeonCard2 />
       </div>
 
-      {/* Parallelogram Card (Above Neon Card) */}
-      <div 
-        className="relative w-[1200px] h-[380px] flex flex-col rounded-xl items-center pt-24 overflow-hidden my-20 shadow-lg backdrop-brightness-150 z-10" 
-        style={{ backgroundImage: `url(${parallelogram2})`, backgroundPosition: "center", backgroundSize: "cover" }}
-      >
-        <h2 className='text-4xl text-white font-semibold'>Got an Idea of Your Own? Let's</h2>
+      <span className="absolute  w-[400px] h-[400px] top-45 right-0  ">
+        <img src={warmhole2} alt="warmhole" className="w-[580px] h-[485px] top-50 right-0 overflow-hidden opacity-[50%] " />
+      </span>
+     
+      <div className=' flex justify-center w-full h-[550px] mt-25 relative'>
+       
+      
+      <div className=' h-[400px] w-[1200px] rounded-xl top-0 right-[10%] absolute '>
+       <div className='h-full w-full flex flex-col items-center justify-center  bg-neutral-800 backdrop-brightness-150 rounded-xl'
+       style={{
+                   backgroundImage: `url(${parallelogram2})`,
+                   backgroundSize: "cover",
+                   backgroundPosition: "center",
+                 }}
+       >
+       <div className='p-1 flex flex-col items-center justify-center'>
+       <h2 className='text-4xl text-white font-semibold'>Got an Idea of Your Own? Let's</h2>
         <h2 className='text-4xl text-white font-semibold'>Make It Happen!</h2>
         <div className="w-[587px] h-[72px] m-3">
           <p className="text-neutral-200 text-md text-center">
@@ -42,10 +53,15 @@ const FellowshipCard = () => {
           </p>
         </div>
         <button className="bg-white mt-8 w-[223px] h-[42px] text-purple-600 rounded-xl font-semibold cursor-pointer">Apply for Fellowship 🚀</button>
+       </div>
+       {
+        
+       }
+       </div>
       </div>
-      <div className="absolute right-0 w-[400px] h-[400px] top-0">
-        <img src={warmhole2} alt="warmhole" className="w-[580px] h-[485px]  " />
-      </div>
+     
+    </div>
+      
     </div>
   );
 };

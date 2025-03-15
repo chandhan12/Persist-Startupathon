@@ -46,11 +46,11 @@ const   captionArr=caption.split(" ")
         <div
         
         style={{
-          backgroundImage: `url('https://s3-alpha-sig.figma.com/img/febf/e326/9e9e4f2ff3a6ed33713ba56d8d4c9b69?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=CmFclLJXdXXf0uTranZUlxaYlfFyp~No6HlMFKs8mIYsXgHKXKkHe5ptsr8TS-0toCJPcrhGMRadL4z~E3jNVrUOYR5k1r2QXHYN0-AHvo90ZHjdt8VO-w2LDuA6WGnRZ-wm96THC69ZGIAslWOmTh-jTvM-cYGaf67jvLQ1NcBKHy4p5-XkbjTIfG7bOhLrggWITi6p93ONb3W0nQuMseDDtX9WGTmTaUR-YDW83UrUI0Z4V7j6zEowcaHvxToe5fmVpWSiXdb3Q99cVO0ohSJFQCPfxhIIDfRIen1DoGTkDaqBMt6eB~2~qD5euspmWc5yq4ZVVM2ACczdvcGjMQ__')`,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '40px 40px',
+          // backgroundImage: `url('https://s3-alpha-sig.figma.com/img/febf/e326/9e9e4f2ff3a6ed33713ba56d8d4c9b69?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=CmFclLJXdXXf0uTranZUlxaYlfFyp~No6HlMFKs8mIYsXgHKXKkHe5ptsr8TS-0toCJPcrhGMRadL4z~E3jNVrUOYR5k1r2QXHYN0-AHvo90ZHjdt8VO-w2LDuA6WGnRZ-wm96THC69ZGIAslWOmTh-jTvM-cYGaf67jvLQ1NcBKHy4p5-XkbjTIfG7bOhLrggWITi6p93ONb3W0nQuMseDDtX9WGTmTaUR-YDW83UrUI0Z4V7j6zEowcaHvxToe5fmVpWSiXdb3Q99cVO0ohSJFQCPfxhIIDfRIen1DoGTkDaqBMt6eB~2~qD5euspmWc5yq4ZVVM2ACczdvcGjMQ__')`,
+          // backgroundRepeat: 'repeat',
+          // backgroundSize: '40px 40px',
         
-          transformOrigin: 'center'
+          // transformOrigin: 'center'
         }}
         
         className="relative   bg-[#362c32] bg-opacity-[10%]  w-[1350px] top-[178px] h-[600px] pb-12 md:pb-1 flex flex-col items-center pt-15 md:pt-28 rounded-4xl border border-purple-600">

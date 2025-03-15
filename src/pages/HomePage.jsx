@@ -14,6 +14,9 @@ import SlideUpText from '../componentPrac/SlideUpText'
 import SlideUpTextWrapper from '../componentPrac/SlideUpText'
 import ProcessSteps from '../components/CardsInView'
 import TeamMarquee from '../componentPrac/TeamMarquee'
+import FireCanvas from '../components/FireCanvas'
+import ChallengeSlider from '../components/ChallengeSlider'
+import ChallengeSteps from '../components/ChallengeSteps'
 
 
 
@@ -24,7 +27,7 @@ const HomePage = () => {
     
     <HeroSection />
     <RewardsSection />
-
+   
    <ChallengeSection/>
    <GuideSection2/>
    <GallerySection/>
@@ -33,8 +36,6 @@ const HomePage = () => {
    
    <FellowshipCard/>
    <FoundersProject/>
-   
-    
    
    {/* <SubscribeSection /> */}
    <DoubleDiv />
