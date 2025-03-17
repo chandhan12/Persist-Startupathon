@@ -41,20 +41,13 @@ const ChallengeSection = () => {
   // Limit displayed challenges initially
   const visibleChallenges = showAll
     ? challenges
-    : challenges.slice(0, mobileScreen ? 4 : 6); // Show 4 on mobile, 6 on desktop
+    : challenges.slice(0, mobileScreen ? 6 : 12); // Show 4 on mobile, 6 on desktop
 
   return (
-    <div id="challenge" className="relative mt-20">
+    <div id="challenge" className="relative mt-[128px]">
       {/* Top-right floating spheres image */}
       
-      <div  className="absolute top-80 right-4 translate-y-30">
-        <NeonCard2/>
-        <NeonCard3 />
-      </div>
-      <div  className="absolute top-10 right-120 ">
-        <NeonCard2/>
-        <NeonCard3 />
-      </div>
+      
 
       {/* Heading Section */}
       <motion.div className="flex flex-col items-center justify-center">
@@ -78,7 +71,7 @@ const ChallengeSection = () => {
       {/* Challenges Grid */}
       <div className="flex justify-center items-center">
       <motion.div
-        animate={{ height: showAll ? "auto" : "1200px" }} // Dynamic height animation
+        animate={{ height: showAll ? "auto" : "1540px" }} // Dynamic height animation
         transition={{ duration: 0.5 }}
         className="grid lg:grid-cols-3 sm:grid-cols-2 gap-5 m-3 lg:mx-20 items-center justify-center overflow-hidden"
       >
@@ -98,10 +91,10 @@ const ChallengeSection = () => {
 
       {/* Bottom Gradient Shadow with "See More" Button */}
       {!showAll && challenges.length > (mobileScreen ? 4 : 6) && (
-        <div className="absolute bottom-0 left-0 w-full h-72 bg-gradient-to-b from-transparent to-black flex justify-center items-end pb-10">
+        <div className="absolute bottom-0 left-0 w-full h-44 bg-gradient-to-b from-transparent via-[#0A0A0A] to-[#0A0A0A] flex justify-center items-end pb-5">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="text-white font-medium text-md border cursor-pointer h-[56px] w-[157px] border-neutral-400 bg-gradient-to-b from-transparent to-[#1f1f1f] px-4 py-2 rounded-lg transition-all duration-300"
+            className="text-white font-medium text-md border cursor-pointer h-[56px] w-[157px] border-neutral-400  px-4 py-2 rounded-lg transition-all duration-300"
           >
             {showAll ? "See Less" : "See More 🚀"}
           </button>
@@ -112,6 +105,14 @@ const ChallengeSection = () => {
       className="absolute top-[5px] left-[1180px] opacity-[50%] ">
         <img src={invertedTube} className="h-[414px] w-[667px]" alt="Decorative spheres" />
       </motion.div>
+      <div  className="absolute top-80 right-4 translate-y-30">
+        <NeonCard2/>
+        <NeonCard3 />
+      </div>
+      <div  className="absolute top-10 right-120 ">
+        <NeonCard2/>
+     
+      </div>
     </div>
   );
 };

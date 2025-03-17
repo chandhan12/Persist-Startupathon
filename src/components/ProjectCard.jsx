@@ -2,50 +2,67 @@
 import React from 'react';
 import { AlertCircle } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import linkedIcon from '../assets/linkedIcon.png'
 
 export const ProjectCard = ({ project }) =>{
 const navigate=useNavigate()
 
   
 const handleCompleter=()=>{
-  // console.log(project._id)
+  
   navigate(`completed/${project._id}`)
 }
 
   
   return (
    
-  <div className="w-[413px] h-[380px] flex-shrink-0 mx-4 border bg-blend-saturation border-purple-700 bg-gradient-to-r from-[#333150] to-[#39334a] rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]">
-    <div className="flex gap-3 justify-center m-5 items-center">
-      <img src={project.image} className="h-10 w-10" alt={project.project} />
+  <div className="w-[413px] h-[400px] flex-shrink-0 mx-4 bg-[#1f1d31]   rounded-[12px] shadow-lg overflow-hidden  border-2 border-violet-500/50 transform transition-all duration-300 hover:shadow-2xl ">
+    <div className='flex justify-center items-center'>
+    <div className="flex h-[48px] w-[176px]  justify-center m-3 gap-[17px] items-center">
+      <img src={project.image} className="h-[40px] w-[40px]" alt={project.project} />
       <h2 className="text-xl font-semibold text-white">{project.project}</h2>
     </div>
+    </div>
     
-    <div className="h-[0.02rem] bg-neutral-600 w-80 mx-auto mt-4 rounded-xl" />
-
-    <div className="flex gap-3 ml-8 my-6">
+    <div className="h-[2px] bg-[#FFFFFF40]/25 w-[342px] mx-auto mt-4 rounded-xl" />
+  <div className='flex justify-center'>
+  
+  <div className='h-[200px] w-[349px] flex flex-col gap-[16px]'>
+    <div className="flex gap-3 h-[113px] w-[349px] justify-center items-center">
       <img 
         src={project.profilePicture} 
         alt={project.profile} 
-        className="h-20 w-20 rounded-full border border-white object-cover"
+        className="h-[90px] w-[90px] rounded-full border border-white object-cover"
       />
-      <div className="flex flex-col gap-2">
-        <h2 className="text-white text-md font-semibold">{project.profile}</h2>
-        <p className="text-white text-xs">{project.position}</p>
-        <div className="bg-white text-black text-xs rounded-lg h-6 w-28 flex items-center justify-center gap-1 font-semibold">
-          IFO : ${project.funding} <AlertCircle size={12} />
+      <div className="flex flex-col justify-center gap-1 h-[113px] w-[240px]">
+         <div className='flex gap-[6px]  items-center'>
+         <h2 className="text-[#FFFFFF] text-[20px] font-[700] font-[Bricolage Grotesque leading-[130%]">{project.profile}</h2>
+         <img src={linkedIcon} alt="linkedIcon" className='h-[20px] w-[20px] cursor-pointer' />
+         </div>
+        <p className="text-[#FFFFFF] text-[14px] font-[500]">{project.position}</p>
+        <div className="bg-gradient-to-b from-[#565656] to-[#1C1C1C] border border-[#FFFFFF]/25   rounded-[8px] h-[28px] w-[136px] flex items-center justify-center gap-[4px] font-semibold">
+            <span className='text-[12px] font-[700] leading-[150%] text-[#4EB400]'>IFO : ${project.funding} </span> <AlertCircle className='h-[14px] w-[14px] text-[12px] font-[700] leading-[150%] text-[#4EB400]' />
         </div>
       </div>
     </div>
     
-    <div className="px-8">
-      <p className="text-neutral-300 text-sm line-clamp-3">{project.description}</p>
-      <button onClick={handleCompleter} className="cursor-pointer rounded-xl h-[40px] mt-7 w-full bg-gradient-to-b from-[#AE98E7] to-[#805ED9] text-white hover:opacity-90 transition-opacity">
+    <div className="px-2">
+      <p className="text-[14px] font-[500] leading-[150%] text-[#FFFFFF] line-clamp-3">{project.description}</p>
+      
+    </div>
+    </div>
+    
+</div>
+<div className='flex justify-center'>
+<button onClick={handleCompleter} className="cursor-pointer rounded-[12px] h-[40px] mt-[10px] w-[340px] bg-gradient-to-b from-[#AE98E7] to-[#805ED9] text-white hover:opacity-90 transition-opacity">
         View Details
       </button>
-    </div>
+</div>
   </div>
 
   )
 
 }
+
+
+/**bg-[#1f1d31] */

@@ -73,8 +73,8 @@ const ProjectCarousel = () => {
         <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text text-center">are you next?</span> </p>
       </div>
 
-      <div className="absolute top-30 bottom-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
-      <div className="absolute top-30 bottom-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute top-60 bottom-8 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute top-50 bottom-8 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
 
       <div className="relative flex flex-col items-center justify-center p-8">
         <div className="w-full overflow-hidden z-0 relative mt-10">

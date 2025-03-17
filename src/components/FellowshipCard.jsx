@@ -4,8 +4,10 @@ import Icosahedron from "../assets/Icosahedron.png";
 import NeonCard3 from "./Ui/NeonCard3";
 import NeonCard2 from "./Ui/NeonCard2";
 import warmhole2 from '../assets/warmhole2.svg'
+import { Link, useNavigate } from "react-router-dom";
 
 const FellowshipCard = () => {
+  
   return (
     <div className="flex flex-col items-center relative my-15">
       {/* Top Image */}
@@ -52,7 +54,7 @@ const FellowshipCard = () => {
             program and take the first step towards success.
           </p>
         </div>
-        <button className="bg-white mt-8 w-[223px] h-[42px] text-purple-600 rounded-xl font-semibold cursor-pointer">Apply for Fellowship 🚀</button>
+                <Link to={'/fellowship'} ><button  className="bg-white mt-8 w-[223px] h-[42px] text-purple-600 rounded-xl font-semibold cursor-pointer">Apply for Fellowship 🚀</button></Link>
        </div>
        {
         

@@ -6,7 +6,7 @@ import ProcessSteps from './CardsInView'
 
 const GuideSection2 = () => {
   return (
-    <div className='flex flex-col items-center p-4 relative '>
+    <div className='flex flex-col items-center p-4 relative mt-[128px]'>
 
     <motion.div
         

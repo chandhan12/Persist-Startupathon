@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Link } from 'react-scroll'
+
 import { navIcon } from '../icons'
 import CustomBtn2 from './ui(old)/CustomBtn2'
 import CustomButton from './Ui/CustomButton'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 
@@ -22,15 +22,21 @@ const Navbar = () => {
   </div>
   <div className='flex'>
   <div className='p-2 text-white hidden lg:block '>
-  <Link to='challenge' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Ongoing Startupathon</Link>
-  <Link to='completers' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Completed Startupathon</Link>
-  <Link to='guide' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Startupathon Guide</Link>
-  <Link to='howtowin' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>How To Win</Link>
-  <Link to='founders' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Mentor Network</Link>
+  <a href='#challenge' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Ongoing Startupathon</a>
+  <a href='#completers' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Completed Startupathon</a>
+  <a href='#guide' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Startupathon Guide</a>
+  <a href='#howtowin' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>How To Win</a>
+  <a to='#founders' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Mentor Network</a>
   
 </div  >
   <div className=' hidden lg:block ml-10'>
-  <CustomButton text="Apply for Fellowship" path='challenge' icon='🚀' height={8}  />
+ 
+ <Link to={'/fellowship'}>
+     <div className={`bg-gradient-to-b from-[#AE98E7] to-[#805ED9] flex py-auto  h-[44px] w-[215px] justify-center items-center cursor-pointer  px-2 rounded-lg`} >
+       <p className='text-[16px] font-[400]  text-white m-1 '>Apply for Fellowship</p>
+       <p className='m-1'>🚀</p>
+     </div>
+     </Link>
   </div>
   </div>
 
@@ -45,18 +51,7 @@ const Navbar = () => {
  
 </div>
 
-{
-  openNav && <div className={`fixed w-full bg-black flex flex-col items-center opacity-100 transition-transform duration-900 ease-in-out ${openNav ? 'translate-y-0' : '-translate-y-full'}`}>
-  <Link to='challenge' duration={600} smooth={true} className=' hover:text-white text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>Ongoing Startupathon</Link>
-  <Link to='completers' duration={600} smooth={true}  className=' hover:text-white text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>Completed Startupathon</Link>
-  <Link to='guide' duration={600} smooth={true} className=' hover:text-white text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>Startupathon Guide</Link>
 
-  <Link to='founders' duration={600} smooth={true} className=' hover:text-white text-purple-600 transition-all duration-200 cursor-pointer text-lg font-normal m-2 p-1'>Mentor Network</Link>
-  
-  <button onClick={navigate('/fellowship')} className='w-[200px] h-10 rounded-lg text-center p-1 mb-4 bg-purple-800 hover:bg-purple-600 transition-all duration-400 cursor-pointer shadow-[0_0_15px_rgba(138,43,226,0.9)] text-white text-md font-semibold'>Apply For Fellowship</button>
-
-  </div>
-}
 </div>
   )
 }
