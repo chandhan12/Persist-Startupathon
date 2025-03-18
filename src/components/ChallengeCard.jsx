@@ -30,7 +30,9 @@ const ChallengeCard = (props) => {
       <button onClick={handleNav} className='h-[40px] w-[308px] cursor-pointer absolute bottom-15  bg-gradient-to-b from-[#AE98E7] to-[#805ED9] rounded-xl text-white  text-lg group-hover:bg-white group-hover:text-[#805ED9] hover:border-white hover:outline-2 transition-all duration-200 hover:outline-black group-hover:border-white group-hover:border group-hover:bg-none'>
         View Details
       </button>
-      <div className=' flex p-1 absolute text-center items-center justify-center bottom-2  text-[12px] font-[500] m-2 text-white text-wrap'><span><img className='h-[22px] w-[22px]' src="https://cdn.prod.website-files.com/623ae64112adcf772da9687e/678a08bb798234106f88d71f_burning.png" alt="" /></span>Deadline approaching apply by: {deadline}</div>
+      <div
+      style={{fontFamily:"Inter"}}
+       className=' flex p-1 absolute text-center items-center justify-center bottom-2  text-[10px] font-[500] m-2 text-white text-wrap'><span><img className='h-[22px] w-[22px]' src="https://cdn.prod.website-files.com/623ae64112adcf772da9687e/678a08bb798234106f88d71f_burning.png" alt="" /></span>Deadline approaching apply by: {deadline}</div>
    </div>
   )
 }

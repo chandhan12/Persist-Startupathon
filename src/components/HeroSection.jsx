@@ -73,14 +73,14 @@ const   captionArr=caption.split(" ")
                   return (
                     <span
                     style={{fontFamily: "Inter"}}
-                    className="text-white hover:font-bold transition-all font-[500]  duration-300 ease-in-out  leading-[150%] text-[16px] hover:scale-105 cursor-default">
+                    className="text-white hover:text-[17px] transition-all font-[500]  duration-300 ease-in-out  leading-[150%] text-[16px] hover:scale-105 cursor-default">
                         {item}{" "}
             </span>
                   )
               })
             }
           </div>
-          <div className="m-2">
+          <div className="m-2 mt-4">
             <CustomButton text="Start your Journey" icon="🚀" height={'[56px]'} width={'[201px]'} path="challenge"  />
           </div>
 

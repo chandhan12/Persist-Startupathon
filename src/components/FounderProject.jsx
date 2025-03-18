@@ -140,7 +140,7 @@ function FoundersProject() {
                   <button
                     onClick={() => handleNav(founder._id)}
                     style={{fontFamily:"Inter"}}
-                    className="w-[257px] h-[40px] text-[14px] font-[400] leading-[140%] bg-gradient-to-b absolute bottom-5 left-[30px] from-[#AE98E7] to-[#805ED9] rounded-xl text-white py-2 mt-4"
+                    className="w-[257px] h-[40px] text-[14px] font-[400] cursor-pointer leading-[140%] bg-gradient-to-b absolute bottom-5 left-[30px] from-[#AE98E7] to-[#805ED9] rounded-xl text-white py-2 mt-4"
                   >
                     View Details
                   </button>

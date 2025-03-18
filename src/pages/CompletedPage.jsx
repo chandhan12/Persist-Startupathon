@@ -44,18 +44,30 @@ const CompletedPage = () => {
 
     return (
         <div className="flex relative flex-col items-center h-auto w-full mt-15">
-            <div className="h-[363px] flex gap-[24px] w-[1301px] my-20">
-                <div className="h-[357px] w-[685px] flex flex-col">
-                    <h2 className="text-5xl text-[#805ED9] font-bold m-2">{completed?.project}</h2>
-                    <p className="text-xl text-[#EDEDED] m-2">{completed?.profile}</p>
-                    <p className="text-lg text-neutral-400 m-2">{completed?.description}</p>
-                    <p className="text-md font-semibold text-white m-2">
+            <div className="h-[363px] flex justify-between w-[1301px]  my-20">
+                <div className="h-[357px] w-[685px] gap-[20px]   flex flex-col">
+                    <h2
+                    style={{fontFamily:"Bricolage Grotesque"}}
+                    className="text-[48px] text-[#805ED9] font-[700] leading-[125%] ">{completed?.project}</h2>
+                    <p
+                    style={{fontFamily:"Bricolage Grotesque"}}
+                    className="text-[24px] font-[500] leading-[140%] text-[#EDEDED] ">{completed?.profile}</p>
+                    <p
+                    style={{fontFamily:"Inter"}}
+                    className="text-[18px] font-[400] leading-[125%] text-[#EDEDED] ">{completed?.description}</p>
+                    <p
+                    style={{fontFamily:"Inter"}}
+                    className="text-[20px] font-[700] leading-[140%] text-white ">
                         Offered Initial funding - <span className="text-[#00D400]">${completed?.funding}</span>
                     </p>
-                    <p className="text-lg font-semibold text-white my-3 mx-2">
+                    <p 
+                    style={{fontFamily:"Bricolage Grotesque"}}
+                    className="text-[25px] font-[600] leading-[100%] text-white ">
                         Eager to make your dream job a reality with us?
                     </p>
-                    <button className='text-white h-[44px] w-[208px] cursor-pointer rounded-xl bg-gradient-to-b  from-[#D1AFFF] to-[#906CFF]'>Discover startupathons</button>
+                    <button
+                    style={{fontFamily:"Inter"}}
+                    className='text-white h-[44px] w-[208px] text-[16px] font-[500] leading-[150%] cursor-pointer rounded-[12px] bg-gradient-to-b  from-[#D1AFFF] to-[#906CFF]'>Discover startupathons</button>
                 </div>
                 <div className="h-[363px] w-[567px] rounded-xl">
                     <iframe
@@ -88,16 +100,22 @@ const CompletedPage = () => {
                  }}
        >
        <div className='p-1 flex flex-col items-center justify-center'>
-       <h2 className='text-4xl text-white font-semibold'>Got an Idea of Your Own? Let's</h2>
-        <h2 className='text-4xl text-white font-semibold'>Make It Happen!</h2>
+       <h2
+       style={{fontFamily:"Bricolage Grotesque"}}
+       className='text-[40px] font-[700] mt-10 text-white leading-[120%]'>Got an Idea of Your Own? Let's</h2>
+        <h2
+        style={{fontFamily:"Bricolage Grotesque"}}
+        className='text-[40px] font-[700] text-white leading-[120%]'>Make It Happen!</h2>
         <div className="w-[587px] h-[72px] m-3">
-          <p className="text-neutral-200 text-md text-center">
+          <p
+          style={{fontFamily:"Inter"}}
+          className="text-[#EDEDED] text-[16px] font-[400] leading-[24px] text-center">
             We are always on the lookout for visionary founders with groundbreaking startup ideas.
             If you're ready to turn your vision into reality, apply below for our Fellowship 
             program and take the first step towards success.
           </p>
         </div>
-                <Link to={'/fellowship'} ><button  className="bg-white mt-8 w-[223px] h-[42px] text-purple-600 rounded-xl font-semibold cursor-pointer">Apply for Fellowship 🚀</button></Link>
+                <Link to={'/fellowship'} ><button  className="bg-white mt-8 w-[213px] h-[44px] text-purple-600 rounded-xl font-semibold cursor-pointer">Apply for Fellowship 🚀</button></Link>
        </div>
      
        </div>
