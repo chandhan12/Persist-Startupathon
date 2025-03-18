@@ -61,7 +61,7 @@ const FellowShipPage = () => {
                   {label === 'Loom Video Link Introducing Yourself And Your Idea' && <p className='text-md text-[#DDDDDD] m-1'>(Please include your introduction, explain your interest in this fellowship, why you are the ideal candidate, and how your project will create an impact)</p>}
                 </div>
               ))}
-              <button className='h-[60px] w-[200px] bg-gradient-to-b from-[#AE98E7] to-[#805ED9] text-white rounded-xl cursor-pointer m-1 font-semibold text-md'>Submit Application</button>
+              <button className='h-[60px] w-[200px] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-white rounded-xl cursor-pointer m-1 font-semibold text-md'>Submit Application</button>
             </div>
           </div>
         </div>

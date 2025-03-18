@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import ChallengeCard from "./ChallengeCard";
 import axios from "axios";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import spheres from "../assets/Spheres1.png";
 import invertedTube from '../assets/invertedTube.svg'
 import NeonCard2 from "./Ui/NeonCard2";
@@ -11,6 +11,9 @@ const ChallengeSection = () => {
   const [challenges, setChallenges] = useState([]);
   const [mobileScreen, setMobileScreen] = useState(window.innerWidth <= 768);
   const [showAll, setShowAll] = useState(false);
+
+  const h2Ref = useRef(null);
+  const isInView = useInView(h2Ref, { once: true });
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,22 +44,24 @@ const ChallengeSection = () => {
   // Limit displayed challenges initially
   const visibleChallenges = showAll
     ? challenges
-    : challenges.slice(0, mobileScreen ? 6 : 12); // Show 4 on mobile, 6 on desktop
+    : challenges.slice(0, mobileScreen ? 6 : 12);
 
   return (
     <div id="challenge" className="relative mt-[128px]">
-      {/* Top-right floating spheres image */}
-      
-      
-
       {/* Heading Section */}
-      <motion.div className="flex flex-col items-center justify-center">
-        <h2 className="text-white text-2xl md:text-5xl text-center font-sans font-semibold mx-1 md:m-2">
+      <div className="flex flex-col items-center justify-center">
+        <motion.h2
+          ref={h2Ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-white text-2xl md:text-5xl text-center font-sans font-semibold mx-1 md:m-2"
+        >
           Ongoing Startupathon{" "}
-          <span className="bg-gradient-to-r from-purple-400 to-purple-500 text-transparent bg-clip-text font-bold">
+          <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text font-bold">
             Challenges
           </span>{" "}
-        </h2>
+        </motion.h2>
 
         <div className="md:w-2/3 w-auto m-2">
           <p className="text-white text-center text-sm md:text-lg m-5">
@@ -66,27 +71,28 @@ const ChallengeSection = () => {
             thing.
           </p>
         </div>
-      </motion.div>
+      </div>
 
       {/* Challenges Grid */}
       <div className="flex justify-center items-center">
-      <motion.div
-        animate={{ height: showAll ? "auto" : "1540px" }} // Dynamic height animation
-        transition={{ duration: 0.5 }}
-        className="grid lg:grid-cols-3 sm:grid-cols-2 gap-5 m-3 lg:mx-20 items-center justify-center overflow-hidden"
-      >
-        {visibleChallenges.map((challenge) => (
-          <ChallengeCard
-            key={challenge._id}
-            image={challenge.image}
-            title={challenge.title}
-            funding={challenge.funding}
-            description={challenge.description}
-            deadline={challenge.deadline}
-            id={challenge._id}
-          />
-        ))}
-      </motion.div>
+        <motion.div
+          
+          animate={{ height: showAll ? "auto" : "1540px" }}
+          transition={{ duration: 0.5 }}
+          className="grid lg:grid-cols-3 sm:grid-cols-2 gap-5 m-3 lg:mx-20 items-center justify-center overflow-hidden"
+        >
+          {visibleChallenges.map((challenge) => (
+            <ChallengeCard
+              key={challenge._id}
+              image={challenge.image}
+              title={challenge.title}
+              funding={challenge.funding}
+              description={challenge.description}
+              deadline={challenge.deadline}
+              id={challenge._id}
+            />
+          ))}
+        </motion.div>
       </div>
 
       {/* Bottom Gradient Shadow with "See More" Button */}
@@ -100,18 +106,19 @@ const ChallengeSection = () => {
           </button>
         </div>
       )}
-      <motion.div
-      
-      className="absolute top-[5px] left-[1180px] opacity-[50%] ">
+
+      {/* Decorative Elements */}
+      <motion.div className="absolute top-[5px] left-[1180px] opacity-[50%]">
         <img src={invertedTube} className="h-[414px] w-[667px]" alt="Decorative spheres" />
       </motion.div>
-      <div  className="absolute top-80 right-4 translate-y-30">
-        <NeonCard2/>
+
+      <div className="absolute top-80 right-4 translate-y-30">
+        <NeonCard2 />
         <NeonCard3 />
       </div>
-      <div  className="absolute top-10 right-120 ">
-        <NeonCard2/>
-     
+
+      <div className="absolute top-10 right-120">
+        <NeonCard2 />
       </div>
     </div>
   );

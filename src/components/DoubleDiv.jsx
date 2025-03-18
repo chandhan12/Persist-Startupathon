@@ -55,7 +55,7 @@ const DoubleDiv = () => {
        <div className='flex flex-col justify-center items-center m-2 p-2'>
             <input ref={nameRef} required type="text" className='h-[44px] w-[456px] bg-transparent text-[#DEDEDE] placeholder-[#DEDEDE] pl-2 border border-neutral-400 rounded-lg m-1' placeholder='Enter your Name' />
             <input ref={emailRef} required type="email" className='h-[44px] w-[456px] bg-transparent text-[#DEDEDE] placeholder-[#DEDEDE] pl-2 border border-neutral-400 rounded-lg m-1' placeholder='Enter your e-mail id' />
-            <button className='h-[44px] w-[173px] bg-[#DEDEDE] rounded-xl m-5 text-[#805ED9] text-lg font-semibold cursor-pointer' >Subscribe</button>
+            <button className='h-[44px] w-[173px] bg-[#DEDEDE] rounded-[12px] m-5 text-[#805ED9] text-lg font-semibold cursor-pointer' ><span className='bg-gradient-to-b from-[#565656] to-[#1C1C1C] text-transparent bg-clip-text text-[16px] font-[600] leading-[150%]'>Subscribe</span></button>
        </div>
        </form>
         )

@@ -47,18 +47,18 @@ const ChallengePage = () => {
         
     }, [challengeId]);
 
-    if (loading) return <p className="text-center text-white">Loading...</p>;
-    if (error) return <p className="text-center text-red-500">{error}</p>;
+    if (loading) return <div className='h-screen w-full flex justify-center items-center'><p className="text-center text-white">Loading...</p></div>;
+    if (error) return <div className='h-screen w-full flex justify-center items-center'><p className="text-center text-red-500">{error}</p></div>;
 
 
 
     const loomVidUrl=challenge.challengeVideo.replace("share","embed")
 
-    console.log(loomVidUrl)
+   
     const handleShrink=()=>{
         setShrink(!shrink)
     }
-    console.log(challengeId)
+    
   return (
     <div className='mt-20 text-white h-auto w-full relative flex flex-col'>
         <div className='absolute top-0 left-0 -translate-x-50'>
@@ -125,7 +125,7 @@ const ChallengePage = () => {
                    </div>
                 </div>
                 </div>
-            <div className='h-[461px] w-[643px] flex flex-col gap-3 '>
+            <div className='h-[461px] w-[643px] flex flex-col gap-3 mt-5 '>
                 <div className='rounded-xl'>
                     <button className='w-[321px] h-[53px] rounded-l-xl cursor-pointer  text-white bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] '>Challenge Details</button>
                     <button className='w-[321px] h-[53px] rounded-r-xl cursor-pointer  text-white bg-[#312c40] '>Helping Resources</button>

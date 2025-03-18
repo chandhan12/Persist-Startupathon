@@ -26,7 +26,7 @@ const VideoCarousel = () => {
       Work Smart, Win Big: Pro <br />
       Tips from Swapnil <br />
       Sharma, CTO of Ovadrive <br />{" "}
-      <span className="bg-gradient-to-r from-purple-400 to-purple-500 text-transparent bg-clip-text font-bold">
+      <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text font-bold">
         (A Startupathon <br/>
         Success)
       </span>{" "}

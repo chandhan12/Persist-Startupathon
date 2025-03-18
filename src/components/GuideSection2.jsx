@@ -1,40 +1,50 @@
-import React from 'react'
-import image1 from '../assets/image1.png'
-import Wavebg from '../assets/Wavebg.svg'
-import {motion} from 'framer-motion'
-import ProcessSteps from './CardsInView'
+import React, { useRef } from "react";
+import image1 from "../assets/image1.png";
+import Wavebg from "../assets/Wavebg.svg";
+import { motion, useInView } from "framer-motion";
+import ProcessSteps from "./CardsInView";
 
 const GuideSection2 = () => {
-  return (
-    <div className='flex flex-col items-center p-4 relative mt-[128px]'>
+  const h2Ref = useRef(null);
+  const isInView = useInView(h2Ref, { once: true, margin: "-100px" });
 
-    <motion.div
-        
-        className="absolute left-[-129px] top-0 -translate-y-30 opacity-[50%]"
-      >
+  return (
+    <div className="flex flex-col items-center p-4 relative mt-[128px]">
+      {/* Background Image */}
+      <motion.div className="absolute left-[-129px] top-0 -translate-y-30 opacity-[50%]">
         <img src={Wavebg} alt="Floating Top Element" className="h-[321px] w-[327px] opacity-[50%]" />
       </motion.div>
-        <h2 className="text-white text-2xl md:text-5xl m-2 font-sans font-semibold mx-1 md:m-4">
-      Found an{" "}
-      <span className="bg-gradient-to-r from-purple-400 to-purple-500 text-transparent bg-clip-text font-bold">
-        idea
-      </span>{" "}
-      that matches your skills?
-      <br />
-    </h2>
-   
-    <div className="md:w-2/3 w-auto m-2">
-      <p className="text-white text-center text-sm md:text-lg m-4">
-        Here's a simple guide on how the Startupathon process works once you find a project that suits your skills. <br />
-       
-      </p>
-    </div>
-    <ProcessSteps/>
-    </div>
-  )
-}
 
-export default GuideSection2
+      {/* Heading with Fade-Up Effect */}
+      <motion.h2
+        ref={h2Ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="text-white text-2xl md:text-5xl m-2 font-sans font-semibold mx-1 md:m-4"
+      >
+        Found an{" "}
+        <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text font-bold">
+          idea
+        </span>{" "}
+        that matches your skills?
+      </motion.h2>
+
+      {/* Subtext */}
+      <div className="md:w-2/3 w-auto m-2">
+        <p className="text-white text-center text-sm md:text-lg m-4">
+          Here's a simple guide on how the Startupathon process works once you find a project that suits your skills.
+        </p>
+      </div>
+
+      {/* Process Steps */}
+      <ProcessSteps />
+    </div>
+  );
+};
+
+export default GuideSection2;
+
 
 /*
  <div className='flex md:flex-row flex-col gap-15 justify-center items-center p-4'>

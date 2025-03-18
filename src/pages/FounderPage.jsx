@@ -50,8 +50,8 @@ const FounderPage = () => {
         
     }, [founderId]);
 
-    if (loading) return <p className="text-center text-white">Loading...</p>;
-    if (error) return <p className="text-center text-red-500">{error}</p>;
+    if (loading) return <div className='flex justify-center items-center w-full h-screen'><p className="text-center text-white">Loading...</p></div>;
+    if (error) return <div className='flex justify-center items-center w-full h-screen'><p className="text-center text-red-500">{error}</p></div>;
 
 
     console.log(founder)

@@ -51,20 +51,24 @@ const RewardsSection = () => {
       <div className='flex flex-col relative justify-center items-center'>
         <div className='h-[204px] w-[934px] gap-[10px] flex flex-col'>
           <motion.h2
-            className='leading-[148%] font-[700] text-[48px] font-[Bricolage Grotesque] text-white text-center'
+          style={{fontFamily: "Bricolage Grotesque"}}
+            className='leading-[125%] font-[700] text-[48px] font-[Bricolage Grotesque] text-white text-center'
             custom={0} variants={fadeUpVariants} initial="hidden" whileInView="visible"
             viewport={{ once: true }}>
             Startupathon <span className='bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text'>Success</span> Comes with
           </motion.h2>
 
           <motion.h2
-            className='leading-[148%] font-[700] text-[48px] font-[Bricolage Grotesque] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text text-center'
+          style={{fontFamily: "Bricolage Grotesque"}}
+            className='leading-[125%] font-[700] text-[48px] font-[Bricolage Grotesque] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text text-center'
             custom={1} variants={fadeUpVariants} initial="hidden" whileInView="visible"
             viewport={{ once: true }}>
             Extraordinary Rewards
           </motion.h2>
 
-          <motion.div className='leading-[150%] text-[16px] font-[500] w-[934px] h-[56px] text-center text-white'>
+          <motion.div
+          style={{fontFamily: "Inter"}}
+          className='leading-[150%] text-[16px] font-[500]  w-[934px] h-[56px] text-center text-white'>
             <motion.p custom={2} variants={fadeUpVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               Unlock unparalleled opportunities and exclusive benefits designed to accelerate your startup journey.
             </motion.p>

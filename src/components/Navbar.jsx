@@ -17,22 +17,22 @@ const Navbar = () => {
   return (
     <div className='transition-all duration-300'>
     <div id='nav' className='h-[80px] w-full px-10 flex bg-[#0A0A0A] justify-between items-center fixed top-0 left-0  z-50'>
-  <div>
+  <Link to={'/'}>
     <img className="h-36 w-36" src="https://cdn.prod.website-files.com/623ae64112adcf772da9687e/678a14a9d3a398bc1e9633b3_Persist%20Startupathon%20White.svg" alt="Logo" />
-  </div>
+  </Link>
   <div className='flex'>
   <div className='p-2 text-white hidden lg:block '>
-  <a href='#challenge' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Ongoing Startupathon</a>
-  <a href='#completers' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Completed Startupathon</a>
-  <a href='#guide' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Startupathon Guide</a>
-  <a href='#howtowin' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>How To Win</a>
-  <a to='#founders' duration={600} smooth={true} className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Mentor Network</a>
+  <a href='#challenge' className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Ongoing Startupathon</a>
+  <a href='#completers' className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Completed Startupathon</a>
+  <a href='#guide' className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Startupathon Guide</a>
+  <Link to={'/howtowin'} href='#howtowin' className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>How To Win</Link>
+  <a href='#founders' className='hover:text-purple-600 transition-all duration-200 cursor-pointer text-md font-normal m-2 p-1'>Mentor Network</a>
   
 </div  >
   <div className=' hidden lg:block ml-10'>
  
  <Link to={'/fellowship'}>
-     <div className={`bg-gradient-to-b from-[#AE98E7] to-[#805ED9] flex py-auto  h-[44px] w-[215px] justify-center items-center cursor-pointer  px-2 rounded-lg`} >
+     <div className={`bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] flex py-auto  h-[44px] w-[215px] justify-center items-center cursor-pointer  px-2 rounded-lg`} >
        <p className='text-[16px] font-[400]  text-white m-1 '>Apply for Fellowship</p>
        <p className='m-1'>🚀</p>
      </div>

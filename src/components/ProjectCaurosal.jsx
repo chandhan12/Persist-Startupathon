@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { ProjectCard } from "./ProjectCard";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import NeonCard2 from "./Ui/NeonCard2";
 import NeonCard3 from "./Ui/NeonCard3";
-import fulldonut from '../assets/fulldonut.svg'
+import fulldonut from '../assets/fulldonut.svg';
 
 const ProjectCarousel = () => {
   const [projects, setProjects] = useState([]);
@@ -13,6 +13,9 @@ const ProjectCarousel = () => {
 
   const controlsRow1 = useAnimation();
   const controlsRow2 = useAnimation();
+
+  const h2Ref = useRef(null);
+  const isH2InView = useInView(h2Ref, { once: true });
 
   const animationConfig = (direction) => ({
     x: direction === "left" ? ["0%", "-100%"] : ["-100%", "0%"],
@@ -63,14 +66,24 @@ const ProjectCarousel = () => {
         <img src={fulldonut} alt="donut" className="w-[412px] h-[288px] opacity-[50%]" />
       </div>
       <div className="flex flex-col items-center gap-5 justify-center mb-5">
-        <h2 className="text-white text-2xl md:text-5xl font-sans font-semibold mx-1 md:m-2">
-          <span className="bg-gradient-to-r from-purple-400 to-purple-500 text-transparent bg-clip-text font-bold">
+        <motion.h2
+          ref={h2Ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isH2InView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-white text-2xl md:text-5xl font-sans font-semibold mx-1 md:m-2"
+        >
+          <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text font-bold">
             Completed
           </span>{" "}
           Startupathon challenges 🏆
-        </h2>
-        <p className="text-white text-[16px] font-[500] text-center  ">People like you have conquered Startupathon challenges and are now leading thriving startups. Their journey started here <br />
-        <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text text-center">are you next?</span> </p>
+        </motion.h2>
+        <p className="text-white text-[16px] font-[500] text-center">
+          People like you have conquered Startupathon challenges and are now leading thriving startups. Their journey started here <br />
+          <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text text-center">
+            are you next?
+          </span>
+        </p>
       </div>
 
       <div className="absolute top-60 bottom-8 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>

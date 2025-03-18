@@ -44,18 +44,23 @@ const   captionArr=caption.split(" ")
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
-        className="relative w-[1350px] top-[178px] h-[600px] pb-12 md:pb-1 flex flex-col items-center pt-15 md:pt-28 rounded-4xl border-2 border-[#906CFF] ">
+        className="relative w-[1350px] top-[178px] h-[600px] pb-12 md:pb-1 flex flex-col items-center pt-[64px] rounded-4xl border-2 border-[#906CFF] ">
       
           
-         
-          <h2 className="text-white text-3xl md:text-6xl font-sans font-semibold mx-1 md:m-2">
+       
+          
+         <h2
+          style={{fontFamily: "Bricolage Grotesque"}}
+          className="text-white text-[64px] font-[700] font-[Bricolage Grotesque] leading-[125%] mx-1 md:m-1">
             Your Chance to{" "}
             <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text font-bold">
               Build, Lead,
             </span>{" "}
             <br />
           </h2>
-          <h2 className="text-white text-3xl md:text-6xl font-sans font-semibold m-1 md:m-2">
+          <h2
+          style={{fontFamily: "Bricolage Grotesque"}}
+          className="text-white text-[64px] font-[700] font-[Bricolage Grotesque] leading-[125%]  m-1 md:m-1">
             and{" "}
             <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text font-bold">
               Succeed
@@ -66,7 +71,9 @@ const   captionArr=caption.split(" ")
             {
               captionArr.map((item)=>{
                   return (
-                    <span className="text-white hover:font-bold transition-all duration-300 ease-in-out text-center text-[18px] hover:scale-105 cursor-default">
+                    <span
+                    style={{fontFamily: "Inter"}}
+                    className="text-white hover:font-bold transition-all font-[500]  duration-300 ease-in-out  leading-[150%] text-[16px] hover:scale-105 cursor-default">
                         {item}{" "}
             </span>
                   )
@@ -78,11 +85,12 @@ const   captionArr=caption.split(" ")
           </div>
 
          
+         
         </div>
    
 
         {/**/}
-        <div className=" shadow-[0_0_30px_rgba(139,92,246,0.4),0_0_30px_rgba(139,92,246,0.2)] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] rounded-3xl p-[2px] h-[538px] w-[900px] translate-y-10  relative ">
+        <div className=" shadow-[0_0_30px_rgba(139,92,246,0.4),0_0_30px_rgba(139,92,246,0.2)] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] rounded-3xl p-[2px] h-[538px] w-[900px] translate-y-15  relative ">
          <div className="h-full w-full rounded-3xl bg-[#0A0A0A]">
            
         <iframe
