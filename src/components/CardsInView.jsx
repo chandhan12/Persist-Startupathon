@@ -112,7 +112,9 @@ export default function ProcessSteps() {
                   {step.text}
                 </p>
               </div>
-              <p className="text-[16px] font-[500] text-[#4EB400] m-2">
+              <p
+              style={{fontFamily:"Inter"}}
+              className="text-[16px] font-[500] text-[#4EB400] m-2">
                 💡 Stay ahead: Submit on time or early to show your dedication!
               </p>
             </motion.div>

@@ -11,6 +11,7 @@ import FoundersProject from '../components/FounderProject'
 
 
 import DoubleDiv from '../components/DoubleDiv'
+import HiringProcessSection from '../components/HiringProcessSection'
 
 
 
@@ -26,6 +27,7 @@ const HomePage = () => {
    <GuideSection2/>
    <GallerySection/>
    <VideoCarousel/>
+   <HiringProcessSection/>
    <ProjectCarousel/>
    
    <FellowshipCard/>

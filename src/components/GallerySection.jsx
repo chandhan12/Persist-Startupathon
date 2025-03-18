@@ -7,14 +7,18 @@ import LetterByLetter from './LetterByLetter'
 
 const GallerySection = () => {
   return (
-    <div className='flex justify-center items-center mt-10'>
+    <div className='flex justify-center items-center mt-[128px]'>
       <div className='w-[1300px] h-[640px] flex flex-col gap-4'>
         <div className='flex gap-2'>
             <div className='h-[223px] w-[540px]  flex justify-center flex-col items-center'>
            <div className='flex items-center'>
-           <LetterByLetter/> <h2 className='text-white text-[64px] font-sans font-[700] mx-1 md:m-2'>with </h2>
+           <LetterByLetter/> <h2
+           style={{fontFamily:"Bricolage Grotesque"}}
+           className='text-white text-[64px] leading-[125%] font-[700] mx-1 md:m-2'>with </h2>
            </div>
-            <h2 className="text-white text-[64px] font-sans font-[700] mx-1 md:m-2">  
+            <h2
+            style={{fontFamily:"Bricolage Grotesque"}}
+            className="text-white text-[64px] leading-[125%] font-[700] mx-1 md:m-2">  
                Startupathon
               <br />
             </h2>

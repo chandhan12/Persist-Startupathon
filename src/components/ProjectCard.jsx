@@ -16,11 +16,14 @@ const handleCompleter=()=>{
   
   return (
    
-  <div className="w-[413px] h-[400px] flex-shrink-0 mx-4 bg-[#1f1d31]   rounded-[12px] shadow-lg overflow-hidden  border-2 border-violet-500/50 transform transition-all duration-300 hover:shadow-2xl ">
+<div className='w-[413px] h-[390px] p-[1px] rounded-[12px] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF]'>
+<div className=" h-full w-full flex-shrink-0 px-4 bg-[#1f1d31]   rounded-[12px] shadow-lg overflow-hidden  transform transition-all duration-300 hover:shadow-2xl ">
     <div className='flex justify-center items-center'>
     <div className="flex h-[48px] w-[176px]  justify-center m-3 gap-[17px] items-center">
       <img src={project.image} className="h-[40px] w-[40px]" alt={project.project} />
-      <h2 className="text-xl font-semibold text-white">{project.project}</h2>
+      <h2
+      style={{fontFamily:"Bricolage Grotesque"}}
+      className="text-[25px] font-[700] leading-[140%] text-white">{project.project}</h2>
     </div>
     </div>
     
@@ -36,29 +39,40 @@ const handleCompleter=()=>{
       />
       <div className="flex flex-col justify-center gap-1 h-[113px] w-[240px]">
          <div className='flex gap-[6px]  items-center'>
-         <h2 className="text-[#FFFFFF] text-[20px] font-[700] font-[Bricolage Grotesque leading-[130%]">{project.profile}</h2>
+         <h2
+         style={{fontFamily:"Bricolage Grotesque"}}
+         className="text-[#FFFFFF] text-[20px] font-[700] font-[Bricolage Grotesque leading-[130%]">{project.profile}</h2>
          <img src={linkedIcon} alt="linkedIcon" className='h-[20px] w-[20px] cursor-pointer' />
          </div>
-        <p className="text-[#FFFFFF] text-[14px] font-[500]">{project.position}</p>
+        <p 
+        style={{fontFamily:"Inter"}}
+        className="text-[#FFFFFF] text-[14px] font-[500]">{project.position}</p>
         <div className="bg-gradient-to-b from-[#565656] to-[#1C1C1C] border border-[#FFFFFF]/25   rounded-[8px] h-[28px] w-[136px] flex items-center justify-center gap-[4px] font-semibold">
-            <span className='text-[12px] font-[700] leading-[150%] text-[#4EB400]'>IFO : ${project.funding} </span> <AlertCircle className='h-[14px] w-[14px] text-[12px] font-[700] leading-[150%] text-[#4EB400]' />
+            <span 
+            style={{fontFamily:"Inter"}}
+            className='text-[12px] font-[700] leading-[150%] text-[#4EB400]'>IFO : ${project.funding} </span> <AlertCircle className='h-[14px] w-[14px] text-[12px] font-[700] leading-[150%] text-[#4EB400]' />
         </div>
       </div>
     </div>
     
     <div className="px-2">
-      <p className="text-[14px] font-[500] leading-[150%] text-[#FFFFFF] line-clamp-3">{project.description}</p>
+      <p
+      style={{fontFamily:"Inter"}}
+      className="text-[14px] font-[500] leading-[150%] text-[#FFFFFF] line-clamp-3">{project.description}</p>
       
     </div>
     </div>
     
 </div>
 <div className='flex justify-center'>
-<button onClick={handleCompleter} className="cursor-pointer rounded-[12px] h-[40px] mt-[10px] w-[340px] bg-gradient-to-b from-[#AE98E7] to-[#805ED9] text-white hover:opacity-90 transition-opacity">
+<button
+style={{fontFamily:"Inter"}}
+onClick={handleCompleter} className="cursor-pointer text-[14px] font-[500] leading-[150%] rounded-[12px] h-[40px] mt-[10px] w-[340px] bg-gradient-to-b from-[#AE98E7] to-[#805ED9] text-white hover:opacity-90 transition-opacity">
         View Details
       </button>
 </div>
   </div>
+</div>
 
   )
 

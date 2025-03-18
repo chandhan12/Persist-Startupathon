@@ -45,9 +45,13 @@ const DoubleDiv = () => {
                    backgroundPosition: "center",
                  }}
        >
-       <div className='p-1'>
-       <h2 className='text-4xl text-[#DEDEDE] font-semibold text-center'>Stay Ahead with Exclusive</h2>
-       <h2 className='text-4xl text-[#DEDEDE] font-semibold text-center'>Startupathon Updates!</h2>
+       <div className='p-1 mt-3'>
+       <h2 
+       style={{fontFamily:"Bricolage Grotesque"}}
+       className='text-[64px] font-[700] text-[#DEDEDE] leading-[125%] text-center'>Stay Ahead with Exclusive</h2>
+       <h2 
+       style={{fontFamily:"Bricolage Grotesque"}}
+       className='text-[64px] font-[700] text-[#DEDEDE] leading-[125%] text-center'>Startupathon Updates!</h2>
        </div>
        {
         subscribed ? <p className='text-[#DEDEDE] text-md text-center m-5'>We'll notify you as soon as a new Startupathon challenge is added.</p> : (
@@ -55,7 +59,9 @@ const DoubleDiv = () => {
        <div className='flex flex-col justify-center items-center m-2 p-2'>
             <input ref={nameRef} required type="text" className='h-[44px] w-[456px] bg-transparent text-[#DEDEDE] placeholder-[#DEDEDE] pl-2 border border-neutral-400 rounded-lg m-1' placeholder='Enter your Name' />
             <input ref={emailRef} required type="email" className='h-[44px] w-[456px] bg-transparent text-[#DEDEDE] placeholder-[#DEDEDE] pl-2 border border-neutral-400 rounded-lg m-1' placeholder='Enter your e-mail id' />
-            <button className='h-[44px] w-[173px] bg-[#DEDEDE] rounded-[12px] m-5 text-[#805ED9] text-lg font-semibold cursor-pointer' ><span className='bg-gradient-to-b from-[#565656] to-[#1C1C1C] text-transparent bg-clip-text text-[16px] font-[600] leading-[150%]'>Subscribe</span></button>
+            <button
+            style={{fontFamily:"Inter"}}
+            className='h-[44px] w-[173px] bg-[#DEDEDE] rounded-[12px] m-5 text-[#805ED9] text-[16px] font-[600] leading-[150%] cursor-pointer' ><span className='bg-gradient-to-b from-[#565656] to-[#1C1C1C] text-transparent bg-clip-text text-[16px] font-[600] leading-[150%]'>Subscribe</span></button>
        </div>
        </form>
         )

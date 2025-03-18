@@ -61,7 +61,7 @@ const ProjectCarousel = () => {
   const duplicatedRow2 = [...row2, ...row2, ...row2];
 
   return (
-    <div className="relative mt-50">
+    <div className="relative mt-[128px]">
       <div className="absolute left-[-226px] top-0 -translate-y-40">
         <img src={fulldonut} alt="donut" className="w-[412px] h-[288px] opacity-[50%]" />
       </div>
@@ -71,14 +71,17 @@ const ProjectCarousel = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isH2InView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-white text-2xl md:text-5xl font-sans font-semibold mx-1 md:m-2"
+          style={{fontFamily:"Bricolage Grotesque"}}
+          className="text-white text-[48px] font-[700] leading-[125%] mx-1 md:m-2"
         >
           <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text font-bold">
             Completed
           </span>{" "}
           Startupathon challenges 🏆
         </motion.h2>
-        <p className="text-white text-[16px] font-[500] text-center">
+        <p
+        style={{fontFamily:"Inter"}}
+         className="text-white text-[16px] font-[500] leading-[150%] text-center">
           People like you have conquered Startupathon challenges and are now leading thriving startups. Their journey started here <br />
           <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text text-center">
             are you next?

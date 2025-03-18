@@ -45,16 +45,24 @@ const FellowshipCard = () => {
                  }}
        >
        <div className='p-1 flex flex-col items-center justify-center'>
-       <h2 className='text-4xl text-white font-semibold'>Got an Idea of Your Own? Let's</h2>
-        <h2 className='text-4xl text-white font-semibold'>Make It Happen!</h2>
+       <h2 
+       style={{fontFamily:"Bricolage Grotesque"}}
+       className='text-[40px] font-[700] text-white leading-[125%]'>Got an Idea of Your Own? Let's</h2>
+        <h2 
+        style={{fontFamily:"Bricolage Grotesque"}}
+        className='text-[40px] font-[700] text-white leading-[125%]'>Make It Happen!</h2>
         <div className="w-[587px] h-[72px] m-3">
-          <p className="text-neutral-200 text-md text-center">
+          <p
+          style={{fontFamily:"Inter"}}
+          className="text-white font-[400] text-[16px] text-center">
             We are always on the lookout for visionary founders with groundbreaking startup ideas.
             If you're ready to turn your vision into reality, apply below for our Fellowship 
             program and take the first step towards success.
           </p>
         </div>
-                <Link to={'/fellowship'} ><button  className="bg-white mt-8 w-[223px] h-[42px] text-purple-600 rounded-xl font-semibold cursor-pointer">Apply for Fellowship 🚀</button></Link>
+                <Link to={'/fellowship'} ><button 
+                style={{fontFamily:"Inter"}}
+                className="bg-white mt-8 w-[223px] h-[42px] text-purple-600 rounded-xl font-[600] text-[16px] leading-[150%] cursor-pointer"><span className="bg-gradient-to-b from-[#AE98E7] to-[#805ED9] text-transparent bg-clip-text">Apply for Fellowship</span> 🚀</button></Link>
        </div>
        {
         

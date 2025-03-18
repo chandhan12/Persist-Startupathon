@@ -49,7 +49,8 @@ function FoundersProject() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-white text-2xl md:text-[48px] font-[700] font-[Bricolage Grotesque] mx-1 md:m-1"
+        style={{fontFamily:"Bricolage Grotesque"}}
+        className="text-white leading-[125%] text-[48px] font-[700]  mx-1 md:m-1"
       >
         <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text">
           Unlock Exclusive
@@ -61,7 +62,8 @@ function FoundersProject() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
-        className="text-white text-2xl md:text-[48px] font-[700] font-[Bricolage Grotesque] m-1 md:m-1"
+        style={{fontFamily:"Bricolage Grotesque"}}
+        className="text-white text-[48px] font-[700] font-[Bricolage Grotesque] m-1 md:m-1"
       >
         <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text">
           Elite Founder Network
@@ -74,6 +76,7 @@ function FoundersProject() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
         viewport={{ once: true }}
+        style={{fontFamily:"Inter"}}
         className="md:w-[934px] h-[56px] mt-3 mb-10"
       >
         <p className="text-white text-center text-[16px] font-[500] leading-[150%]">
@@ -83,7 +86,9 @@ function FoundersProject() {
       
       {/* View All Link */}
       <div className="flex justify-end w-3/4">
-        <div className="text-white text-right m-4 flex gap-2 cursor-pointer">
+        <div
+        style={{fontFamily:"Bricolage Grotesque"}}
+        className="text-white text-[20px] font-[400] leading-[140%] text-right translate-x-25 mb-[31px] flex gap-1 cursor-pointer">
           View all {leftIcon}
         </div>
       </div>
@@ -119,18 +124,23 @@ function FoundersProject() {
                   />
                   <div className="flex justify-center">
                     <div className="flex justify-center items-center w-[257px] h-[28px] gap-[8px]">
-                      <h2 className="text-[#FFFFFF] text-[20px] font-[700] leading-[140%] font-[Bricolage Grotesque]">
+                      <h2
+                      style={{fontFamily:"Bricolage Grotesque"}}
+                      className="text-[#FFFFFF] text-[20px] font-[700] leading-[140%] font-[Bricolage Grotesque]">
                         {founder.name}
                       </h2>
                       <img src={linkedIcon} alt="linkedIcon" className="h-[20px] w-[20px]" />
                     </div>
                   </div>
-                  <p className="text-[#FFFFFF] text-[14px] font-[400] leading-[140%] m-2">
+                  <p
+                  style={{fontFamily:"Inter"}}
+                  className="text-[#FFFFFF] text-[14px] font-[400] leading-[140%] m-2">
                     {founder.position}
                   </p>
                   <button
                     onClick={() => handleNav(founder._id)}
-                    className="w-[257px] h-[40px] bg-gradient-to-b absolute bottom-5 left-[30px] from-[#AE98E7] to-[#805ED9] rounded-xl text-white py-2 mt-4"
+                    style={{fontFamily:"Inter"}}
+                    className="w-[257px] h-[40px] text-[14px] font-[400] leading-[140%] bg-gradient-to-b absolute bottom-5 left-[30px] from-[#AE98E7] to-[#805ED9] rounded-xl text-white py-2 mt-4"
                   >
                     View Details
                   </button>

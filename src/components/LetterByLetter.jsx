@@ -90,7 +90,8 @@ function LetterByLetter() {
               initial="enter"
               animate="center"
               exit="exit"
-              className="inline-block text-white  text-[64px] font-[700]"
+              style={{fontFamily:"Bricolage Grotesque"}}
+              className="inline-block text-white  leading-[125%] text-[64px] font-[700]"
             >
               {letter}
             </motion.span>
