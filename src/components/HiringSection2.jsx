@@ -11,7 +11,7 @@ const VideoCarousel = () => {
           <div className="p-2 w-[563px] h-[299] ">
             <h2
             style={{fontFamily:"Bricolage Grotesque"}}
-            className="text-white text-[48px] font-[700] leading-[125%]    mx-1 md:m-2">
+            className="text-white text-[44px] font-[700] leading-[125%]    mx-1 md:m-2">
               Work Smart, Win Big: Pro
               Tips from Swapnil 
               Sharma, CTO of Ovadrive <br />
