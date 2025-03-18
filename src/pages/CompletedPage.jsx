@@ -24,7 +24,7 @@ const CompletedPage = () => {
         const fetchCompleted = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get(`http://localhost:3000/api/admin/completed/${completedId}`);
+                const response = await axios.get(`https://persiststartupathon-admin.onrender.com/api/admin/completed/${completedId}`);
                 setCompleted(response.data.item);
             } catch (err) {
                 if (!axios.isCancel(err)) {

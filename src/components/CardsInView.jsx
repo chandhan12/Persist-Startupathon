@@ -95,15 +95,17 @@ export default function ProcessSteps() {
                 </p>
               </div>
               <h3
-                className={`text-2xl font-[700] font-[Bricolage Grotesque] text-[40px] ${
+               style={{fontFamily:"Bricolage Grotesque"}}
+                className={`leading-[120%] font-[700] text-[40px] ${
                   activatedSteps.has(step.id) ? "text-white" : "text-white/20"
                 }`}
               >
                 {step.title}
               </h3>
               <div className="w-[623px] h-[140px]">
-                <p
-                  className={`text-[33px] font-[400] ${
+                <p 
+                  style={{fontFamily:"Inter"}}
+                  className={`text-[33px] font-[400] leading-[150%] ${
                     activatedSteps.has(step.id) ? "text-white" : "text-white/20 text-lg"
                   }`}
                 >

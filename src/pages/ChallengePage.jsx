@@ -32,7 +32,7 @@ const ChallengePage = () => {
         const fetchChallenge = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get(`http://localhost:3000/api/admin/challenge/${challengeId}`);
+                const response = await axios.get(`https://persiststartupathon-admin.onrender.com/api/admin/challenge/${challengeId}`);
                 setChallenge(response.data.item);
             } catch (err) {
                 if (!axios.isCancel(err)) {

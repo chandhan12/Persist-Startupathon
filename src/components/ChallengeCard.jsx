@@ -16,12 +16,16 @@ const ChallengeCard = (props) => {
      <div className='flex flex-col justify-center items-center h-[102px] w-[152px]'>
      <img className='h-[105px] w-[105px] m-2' src={image} alt={title} />
      </div>
-      <h2 className='text-[#FFFFFF] m-3 text-center font-[700] text-[32px]'>{title}</h2>
+      <h2
+      style={{ fontFamily: "Bricolage Grotesque" }}
+      className='text-[#FFFFFF] m-3 text-center leading-[130%] font-[700] text-[32px]'>{title}</h2>
       <div className='h-8 w-34 rounded-lg p-2 m-1 flex flex-row justify-center items-center  border border-neutral-400 bg-gradient-to-b from-neutral-600 to-[#1f1f1f] '>
          <p className='text-[#00D400]  text-[12px] font-[700] mx-1'>IFO : ${funding} </p>
          <p className='text-[#00D400] text-[12px] font-[700] '>{exlametaryIcon}</p>
       </div>
-      <p className='text-[#FFFFFF] text-center text-[16px] font-[400]  mx-5 my-3 '>{description}</p>
+      <p
+      style={{ fontFamily: "Inter" }}
+      className='text-[#FFFFFF] leading-[150%] text-center text-[16px] font-[400]  mx-5 mt-7 line-clamp-5 '>{description}</p>
 
       <button onClick={handleNav} className='h-[40px] w-[308px] cursor-pointer absolute bottom-15  bg-gradient-to-b from-[#AE98E7] to-[#805ED9] rounded-xl text-white  text-lg group-hover:bg-white group-hover:text-[#805ED9] hover:border-white hover:outline-2 transition-all duration-200 hover:outline-black group-hover:border-white group-hover:border group-hover:bg-none'>
         View Details

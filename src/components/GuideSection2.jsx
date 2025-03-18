@@ -21,7 +21,8 @@ const GuideSection2 = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-white text-2xl md:text-5xl m-2 font-sans font-semibold mx-1 md:m-4"
+        style={{fontFamily:"Bricolage Grotesque"}}
+        className="text-white text-[48px] font-[700] leading-[125%] "
       >
         Found an{" "}
         <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text font-bold">
@@ -31,8 +32,10 @@ const GuideSection2 = () => {
       </motion.h2>
 
       {/* Subtext */}
-      <div className="md:w-2/3 w-auto m-2">
-        <p className="text-white text-center text-sm md:text-lg m-4">
+      <div className="h-[56px] w-[934px] m-2">
+        <p
+        style={{fontFamily:"Inter"}}
+        className="text-white text-[16px] font-[500] leading-[150%] text-center ">
           Here's a simple guide on how the Startupathon process works once you find a project that suits your skills.
         </p>
       </div>

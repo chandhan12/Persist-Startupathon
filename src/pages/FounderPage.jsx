@@ -35,7 +35,7 @@ const FounderPage = () => {
         const fetchFounder = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get(`http://localhost:3000/api/admin/founder/${founderId}`);
+                const response = await axios.get(`https://persiststartupathon-admin.onrender.com/api/admin/founder/${founderId}`);
                 setFounder(response.data.item);
             } catch (err) {
                 if (!axios.isCancel(err)) {
