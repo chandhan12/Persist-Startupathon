@@ -55,6 +55,7 @@ const ChallengeSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          
           className="text-white text-2xl md:text-5xl text-center font-sans font-semibold mx-1 md:m-2"
         >
           Ongoing Startupathon{" "}
