@@ -50,7 +50,7 @@ const handleCompleter=()=>{
         <div className="bg-gradient-to-b from-[#565656] to-[#1C1C1C] border border-[#FFFFFF]/25   rounded-[8px] h-[28px] w-[136px] flex items-center justify-center gap-[4px] font-semibold">
             <span 
             style={{fontFamily:"Inter"}}
-            className='text-[12px] font-[700] leading-[150%] text-[#4EB400]'>IFO : ${project.funding} </span> <AlertCircle className='h-[14px] w-[14px] text-[12px] font-[700] leading-[150%] text-[#4EB400]' />
+            className='text-[12px] font-[700] leading-[150%] text-[#4EB400]'>IFO : ${project.funding} </span> <AlertCircle className='h-[14px] w-[14px] text-[12px] font-[700] leading-[150%] text-[#DDDDDD]' />
         </div>
       </div>
     </div>

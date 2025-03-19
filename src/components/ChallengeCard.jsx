@@ -1,6 +1,7 @@
 import React from 'react'
 import { exlametaryIcon } from '../icons'
 import { useNavigate } from 'react-router-dom'
+import { AlertCircle } from 'lucide-react'
 
 const ChallengeCard = (props) => {
     const {title,image,funding,description,deadline,id}=props
@@ -20,8 +21,8 @@ const ChallengeCard = (props) => {
       style={{ fontFamily: "Bricolage Grotesque" }}
       className='text-[#FFFFFF] m-3 text-center leading-[130%] font-[700] text-[32px]'>{title}</h2>
       <div className='h-8 w-34 rounded-lg p-2 m-1 flex flex-row justify-center items-center  border border-neutral-400 bg-gradient-to-b from-neutral-600 to-[#1f1f1f] '>
-         <p className='text-[#00D400]  text-[12px] font-[700] mx-1'>IFO : ${funding} </p>
-         <p className='text-[#00D400] text-[12px] font-[700] '>{exlametaryIcon}</p>
+         <p className='text-[#00D400]  text-[12px] font-[700] mx-2'>IFO : ${funding} </p>
+         <AlertCircle className='h-[14px] w-[14px] text-[12px] font-[700] leading-[150%] text-[#DDDDDD]' />
       </div>
       <p
       style={{ fontFamily: "Inter" }}

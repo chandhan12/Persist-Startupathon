@@ -48,10 +48,10 @@ const DoubleDiv = () => {
        <div className='p-1 mt-3'>
        <h2 
        style={{fontFamily:"Bricolage Grotesque"}}
-       className='text-[64px] font-[700] text-[#DEDEDE] leading-[125%] text-center'>Stay Ahead with Exclusive</h2>
+       className='text-[50px] font-[700] text-[#DEDEDE] leading-[125%] text-center'>Stay Ahead with Exclusive</h2>
        <h2 
        style={{fontFamily:"Bricolage Grotesque"}}
-       className='text-[64px] font-[700] text-[#DEDEDE] leading-[125%] text-center'>Startupathon Updates!</h2>
+       className='text-[50px] font-[700] text-[#DEDEDE] leading-[125%] text-center'>Startupathon Updates!</h2>
        </div>
        {
         subscribed ? <p className='text-[#DEDEDE] text-md text-center m-5'>We'll notify you as soon as a new Startupathon challenge is added.</p> : (

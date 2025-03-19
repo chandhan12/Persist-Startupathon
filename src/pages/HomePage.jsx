@@ -35,7 +35,12 @@ const HomePage = () => {
    
    
    <DoubleDiv />
-  
+  <div className='h-96 w-96'>
+  <blockquote class="twitter-tweet">
+              <a href="https://twitter.com/vineetwts/status/1902012275772592587"></a> 
+            </blockquote>
+  </div>
+
    
    </div>
    </>

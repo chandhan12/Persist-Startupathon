@@ -115,7 +115,9 @@ const CompletedPage = () => {
             program and take the first step towards success.
           </p>
         </div>
-                <Link to={'/fellowship'} ><button  className="bg-white mt-8 w-[213px] h-[44px] text-purple-600 rounded-xl font-semibold cursor-pointer">Apply for Fellowship 🚀</button></Link>
+                <Link to={'/fellowship'} ><button 
+                style={{fontFamily:"Inter"}}
+                 className="bg-white mt-8 w-[213px] h-[44px]  rounded-[12px]  cursor-pointer"><span className='text-[16px] font-[600] leading-[150%] bg-gradient-to-b from-[#AE98E7] to-[#805ED9] text-transparent bg-clip-text'>Apply for Fellowship</span> 🚀</button></Link>
        </div>
      
        </div>
