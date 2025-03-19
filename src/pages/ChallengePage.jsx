@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link } from "react-scroll"
+import {  useParams } from 'react-router-dom'
 import parallelogram2 from "../assets/parallelogram2.png";
 import BotIcon from '../assets/BotIcon.png'
 import { minusIcon, plusIcon, sendIcon } from '../icons';
@@ -25,6 +26,7 @@ const ChallengePage = () => {
     const [resourcesPopUp,setResourcesPopUp]=useState(false)
     const [activeResource,setActiveResource]=useState(1)
     const [rewardsPopUp,setRewardsPopUp]=useState(false)
+    const [cursorPopUp,setCursorPopUp]=useState(false)
 
   const [challenge, setChallenge] = useState(null);
 
@@ -205,6 +207,24 @@ const allPerks=[
     }
     
 ]
+
+const cursorGuideArr=[
+    {
+        id:1,
+        title:"📍Here's a tutorial on Cursor, an AI-powered editor that helps you build an MVP in a day with little to no coding skills.",
+        videoLink:"https://www.youtube.com/embed/TmLkFnduWWo?si=bB29livr22CC0ze1"
+    },
+    {
+        id:2,
+        title:"📍Here's a tutorial on Bolt.new, an AI-driven platform that streamlines designing, building, and deploying scalable web applications.",
+        videoLink:"https://www.youtube.com/embed/1SfUMQ1yTY8?si=2b5KV5qSek8nABTk"
+    },
+    {
+        id:3,
+        title:"📍A guide on how people are scaling AI businesses.",
+        videoLink:"https://www.youtube.com/embed/xvJNctOfyAE?si=la-5cZvHM-vqKTtI"
+    }
+]
     
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -255,23 +275,23 @@ const allPerks=[
     console.log(activeResourceDetails)
   return (
     <div className='mt-20 text-white h-auto w-full relative flex flex-col'>
-        <div className='absolute top-0 left-0 -translate-x-50'>
+        <div className='absolute top-0 left-0 opacity-[50%] -translate-x-50'>
             <NeonCard4/>
             <NeonCard5/>
         </div>
-        <div className='absolute top-0 right-8 -translate-y-40 '>
+        <div className='absolute top-0 right-8 opacity-[50%] -translate-y-40 '>
             
             <NeonCard5/>
         </div>
-        <div className='absolute top-[40%] right-8 '>
+        <div className='absolute top-[40%] right-8 opacity-[50%] '>
             
             <NeonCard5/>
         </div>
-        <div className='absolute top-[55%] left-0 -translate-x-50'>
+        <div className='absolute top-[55%] left-0 opacity-[50%] -translate-x-50'>
             <NeonCard4/>
             <NeonCard5/>
         </div>
-        <div className='absolute bottom-[0%] right-8 '>
+        <div className='absolute bottom-[0%] right-8 opacity-[50%] '>
             
             <NeonCard5/>
         </div>
@@ -303,11 +323,11 @@ const allPerks=[
                className='text-white text-[14px] font-[400] leading-[150%]'>Deadline apporaching! Apply by <span className='font-[700]'>{challenge.deadline}</span></p>
                    </div>
                </div>
-               <div className='h-[41px] w-[592px] p-[1px] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] rounded-[8px]'>
+               <div className='h-[50px] w-[620px] p-[1px] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] rounded-[8px]'>
                <div className=' bg-[#312c40] h-full w-full rounded-[8px] p-[12px] gap-[10px] flex items-center  '>
                 <p 
                 style={{fontFamily:"Bricolage Grotesque"}}
-                className='text-white  text-[12px] leading-[150%] font-[500] '>Seeing your amazing submissions, we're increasing the funding by $2,500📈-keep innovating!</p>
+                className='text-white  text-[13px] leading-[150%] font-[500] '>Seeing your amazing submissions, we're increasing the funding by $2,500📈-keep innovating!</p>
                </div>
                </div>
 
@@ -437,33 +457,42 @@ const allPerks=[
 
       
         </div>
-        <div className={`${ shrink ? 'h-[400px]' : 'h-[865px]' } transition-all duration-300 w-[597px] flex justify-center bg-[#1d1b22] rounded-xl  `}>
+        <div className={`${ shrink ? 'h-[563px]' : 'h-[1028px]' } transition-all duration-300 w-[597px] flex justify-center bg-[#1d1b22] rounded-xl  `}>
             <div className='h-[819px] w-[550px] flex flex-col gap-12 mt-8 '>
-                <div className='rounded-3xl'>
-                <div className='h-[196px] w-[550px] backdrop-brightness-[3] rounded-3xl flex flex-col items-center pt-4'
+                <div className='rounded-3xl bg-[#323232]'>
+                <div className='h-[196px] w-[550px] backdrop-brightness-110 rounded-3xl flex flex-col items-center pt-4'
                 style={
                     { backgroundImage: `url(${parallelogram2})`, backgroundPosition: "center", backgroundSize: "cover", }
                 }
                 >
                     <div className='h-[154px] w-[508px] flex flex-col items-center justify-center '>
                         <div className='flex justify-center items-center'>
-                            <p className='text-center text-white text-md '>Take the challenge to transform your life submit your work via our telegram bot,
+                            <p 
+                            style={{fontFamily:"Bricolage Grotesque"}}
+                            className='text-center text-white text-[15.48px] font-[600] leading-[150%] '>Take the challenge to transform your life submit your work via our telegram bot,
                                 use bot to ask questions, receive feedback and earn a certificate for participating!
                             </p>
                         </div>
-                        <button className='mt-8 cursor-pointer rounded-lg h-[36px] w-auto px-4 text-center text-md font-semibold bg-white text-[#805ED9]'>Accept the challenge! 🚀</button>
+                        <a target='_blank' href="https://t.me/systemicpersistbot?start=dewdrop_2686031"><button
+                        style={{fontFamily:"Inter"}}
+                        className='mt-8 cursor-pointer rounded-[7.28px] h-[36px] w-[177px] p-[9.95px] text-center text-[12px] font-[600] leading-[150%] bg-white '><div className='flex gap-2'><p className='bg-gradient-to-b from-[#AE98E7] to-[#805ED9] text-transparent bg-clip-text'>Accept the challenge! </p> 🚀</div> </button></a>
                     </div>
                 </div>
                 </div>
-                <div className={`${ shrink ? 'h-[90px]  ' : 'h-[572px]     ' } overflow-hidden relative transition-all duration-300 w-[550px]    shadow shadow-[#AE98E7]  border border-purple-600 rounded-2xl`}>
+                <div className={`${ shrink ? 'h-[90px]  ' : 'h-[572px]  ' } bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] p-[1px] rounded-2xl`}>
+                <div className={`h-full w-full overflow-hidden relative transition-all duration-300    shadow shadow-[#AE98E7]   rounded-2xl bg-[#1d1b22]`}>
                         <div className={`${shrink ? 'rounded-2xl' : 'rounded-t-2xl'} transition-all duration-300  flex justify-between items-center bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] top-0 w-[550px] h-[90px]`}>
                             <div className={`flex justify-center mx-3 items-center gap-2 p-2`}>
                                 <div>
                                     <img src={BotIcon} className='h-[32px] w-[32px]' alt="" />
                                 </div>
                                 <div className='p-1'>
-                                    <h2 className='text-xl font-semibold text-[#FCFCFC]'>MaitreyaAI Assistant</h2>
-                                    <p className='text-xs text-[#FCFCFC]'>Challenge Guide And Support</p>
+                                    <h2
+                                    style={{fontFamily:"Bricolage Grotesque"}}
+                                    className='text-[19.35px] font-[700] leading-[140%] text-[#FCFCFC]'>MaitreyaAI Assistant</h2>
+                                    <p
+                                    style={{fontFamily:"Inter"}}
+                                    className='text-[11.61px] font-[500] leading-[125%] text-[#FCFCFC]'>Challenge Guide And Support</p>
                                 </div>
                             </div>
                             <div className='mx-3 p-2'>
@@ -476,7 +505,9 @@ const allPerks=[
                        <div className='h-auto  flex gap-1 items-end mx-4 mt-5'>
                             <img src={BotIcon} className='h-[32px] w-[32px]' alt="" />
                             <div className='min-w-auto max-w-[270px] bg-gradient-to-b from-[#3C3C3C] to-[#1C1C1C] rounded-tl-3xl rounded-tr-xl rounded-br-xl p-3 border border-[#805ED9] '>
-                                <p className='text-white '>Hi! 👋 I'm Here To Help You With InstaCreatorBot! Ask Me Anything About 
+                                <p
+                                style={{fontFamily:"Inter"}}
+                                className='text-white text-[15px] font-[300] leading-[125%] '>Hi! 👋 I'm Here To Help You With InstaCreatorBot! Ask Me Anything About 
                                     This Challenge, Video Requirements, Or Any Other Questions You Have.
                                 </p>
                             </div>
@@ -486,7 +517,8 @@ const allPerks=[
                         <div className='h-auto   flex gap-1 items-end mx-4 mt-12'>
                            
                             <div className='min-w-[170px] flex items-center justify-center max-w-[249px] bg-[#312c40] rounded-t-2xl rounded-bl-2xl p-3 border border-[#805ED9] '>
-                                <p className='text-white '>Query 
+                                <p style={{fontFamily:"Inter"}}
+                                className='text-white text-[15px] font-[400] leading-[125%]'>Query 
                                 </p>
                             </div>
                             <img src={BotIcon} className='h-[32px] w-[32px]' alt="" />
@@ -502,27 +534,56 @@ const allPerks=[
                            <button  className='m-2 cursor-ponter text-[#9778E3]'> {sendIcon}</button>
                         </div>
                 </div>
+                </div>
+                <div className={ `${shrink ? 'absolute top-110' : 'top-230 absolute  '} h-[112px] w-[563px]  flex gap-[55px] transition-all duration-300 `}>
+                   <div className='h-[112px] w-[253px] flex flex-col gap-[8px]'>
+                    <h2
+                    style={{fontFamily:"Inter"}}
+                        className='text-white text-[20px] font-[600] leading-[150%]'
+                    >Still Have Doubts About Startupathon?</h2>
+                   <div className='h-[44px] w-[253px] p-[1px] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] rounded-[12px]'>
+                   <button 
+                   style={{fontFamily:"Inter"}}
+                   className='h-full w-full cursor-pointer rounded-[12px] bg-[#1d1b22] text-white text-[14px] font-[500] leading-[150%] gap-[10px] '>Learn more about startupathon 🚀</button>
+                   </div>
+                   </div>
+                   <div className='h-[112px] w-[253px] flex flex-col gap-[8px]'>
+                        <h2
+                        style={{fontFamily:"Inter"}}
+                        className='text-white text-[20px] font-[600] leading-[150%]'>Doesn't Match Your <br /> Skillset? </h2>
+                        <div className='h-[44px] w-[253px] p-[1px] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] rounded-[12px]'>
+                   <Link to="challenge" smooth={true} duration={500}><button
+                   style={{fontFamily:"Inter"}}
+                   className='h-full cursor-pointer w-full rounded-[12px] bg-[#1d1b22] text-white text-[14px] font-[500] leading-[150%] gap-[10px] '>explore more opportunities 🚀</button></Link>
+                   </div>
+                   </div>
+                </div>
             </div>
+           
         </div>
 
        
       </div>
-     <div className='flex justify-center  '>
+     <div className='flex justify-center  mt-25 '>
      <div className='bg-[#DBCDFF] w-auto rounded-3xl'>
-      <div className='h-[277px] w-[971px] backdrop-brightness-[1]  rounded-3xl flex flex-col items-center justify-center pt-4'
+      <div className='h-[277px] w-[971px] backdrop-brightness-105  rounded-3xl flex flex-col items-center justify-center pt-4'
                 style={
                     { backgroundImage: `url(${parallelogram2})`, backgroundPosition: "center", backgroundSize: "cover", }
                 }
                 >
                     <div className='h-[154px] w-[508px] flex flex-col items-center justify-center '>
                         <div className='flex justify-center items-cente w-[849px] h-[64px]'>
-                            <p className='text-center text-black text-xl font-semibold '>Speed up your development process with a 14-day free trail of cursor AI.Cursor lets
+                            <p  
+                            style={{fontFamily:"Bricolage Grotesque"}}
+                            className='text-center text-black text-[20px] font-[700] leading-[140%] '>Speed up your development process with a 14-day free trail of cursor AI.Cursor lets
                                 your code an MVP with little to no coding skills in a day
                             </p>
                         </div>
                         <div className='flex gap-4'>
-                        <button className='mt-8 cursor-pointer rounded-xl h-[40px] w-[288px] px-4 text-center text-md font-semibold bg-[#F2EFFB] text-[#161616]'>14 days cursor trail</button>
-                        <button className='mt-8 cursor-pointer rounded-xl h-[40px] w-[288px] px-4 text-center text-md font-semibold bg-gradient-to-b from-[#AE98E7] to-[#805ED9] text-white'>cursor tutorial</button>
+                        <div className='h-[50px] w-[250px] p-[1.35px] bg-[#855DEE] mt-8 rounded-[16.23px]'><a target='_blank' href="https://www.cursor.com/pricing"><button
+                        style={{fontFamily:"Bricolage Grotesque"}}
+                        className=' h-full w-full cursor-pointer rounded-[16.23px]  px-4 text-center text-[18px] font-[600] leading-[150%] bg-[#F2EFFB] text-[#161616]'>14 days cursor trail</button></a></div>
+                        <div className='h-[50px] w-[250px] p-[1.35px] bg-[#855DEE] mt-8 rounded-[16.23px]'><button onClick={()=>setCursorPopUp(true)} className='cursor-pointer rounded-[16.23px] h-full w-full px-4 text-center text-[18px] font-[600] leading-[150%] bg-gradient-to-b from-[#AE98E7] to-[#805ED9] text-white'>cursor tutorial</button></div>
                         </div>
                     </div>
                 </div>
@@ -546,8 +607,8 @@ const allPerks=[
                  <div className="w-screen h-screen  
                        fixed left-0 top-0 justify-center flex ">
                           <div className="flex justify-center flex-col ">
-                          <div className='h-136 w-[900px]  mt-20 p-[1px] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] rounded-xl'>
-        <div className="bg-[#1d1b22] absolute p-6  rounded-xl h-135 w-[899px] overflow-auto  md:overflow-y-scroll no-scrollbar   transition-all duration-300">
+                          <div className='h-136 w-[750px]  mt-20 p-[1px] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] rounded-xl'>
+        <div className="bg-[#1d1b22] absolute p-6  rounded-xl h-135 w-[749px] overflow-auto  md:overflow-y-scroll no-scrollbar   transition-all duration-300">
        <div className='flex justify-between ml-5 mr-2 my-2'>
         <h2
         style={{fontFamily:"Bricolage Grotesque"}}
@@ -558,7 +619,7 @@ const allPerks=[
       
            <div className='flex flex-col gap-5'>
            {
-                 <div className='dark   w-[500px]'>
+                 <div className='dark   w-[580px]'>
                     {
                 activeResourceDetails.tweets.map((item)=>{
                     return (
@@ -650,6 +711,59 @@ const allPerks=[
        
 
         }
+         {
+            /*more rewards popup */
+
+       
+            cursorPopUp && <div>
+        <div className="w-screen h-screen bg-black
+      opacity-60 fixed left-0 top-0 justify-center flex">
+
+        </div>
+      
+                 <div className="w-screen h-screen  
+                       fixed left-0 top-0 justify-center flex ">
+                          <div className="flex justify-center flex-col ">
+                          <div className='h-136 w-[900px] mx-5 mt-20 p-[1px] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] rounded-xl'>
+        <div className="bg-[#1d1b22] absolute p-6  rounded-xl h-135 w-[899px] overflow-auto  md:overflow-y-scroll no-scrollbar   transition-all duration-300">
+        <div className='flex justify-between ml-5 mr-2 my-2'>
+        <h2
+        style={{fontFamily:"Bricolage Grotesque"}}
+        className='text-[20px] font-[700] leading-[140%]'></h2>
+       <button onClick={()=>setCursorPopUp(false)}  > <X size={24} className='text-[20px] font-[700] leading-[140%] hover:text-[#906CFF] transition-all duration-100 cursor-pointer' /></button>
+       </div>
+     <div className='flex flex-col gap-[20px]'>
+     {
+        cursorGuideArr.map((item)=>{
+            return (
+                <div className='flex flex-col gap-[20px]'>
+                    <h2
+                    style={{fontFamily:"Bricolage Grotesque"}}
+                    className='text-white text-[24px] font-[700] leading-[150%] m-2'>{item.title}</h2>
+                    <div className='w-full rounded-[12px]'>
+                    <iframe className='w-full h-115 rounded-[12px]' src={item.videoLink} 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            )
+        })
+      }
+     </div>
+
+
+
+             </div>
+        </div>
+
+             
+          </div>
+          </div>
+          </div> 
+       
+
+        }
     </div>
   )
 }
@@ -657,101 +771,3 @@ const allPerks=[
 export default ChallengePage
 
 
-//bg-[#312c40]
-
-/**<div>
-              <div className="w-screen h-screen bg-slate-500 
-            opacity-60 fixed left-0 top-0 justify-center flex">
-    
-              </div>
-            
-            <div className="w-screen h-screen  
-             fixed left-0 top-0 justify-center flex ">
-                <div className="flex justify-center flex-col ">
-                <span className="bg-white rounded-lg shadow-lg opacity-100 p-6 w-[400px]">
- 
-  <div className="flex justify-end">
-    <div onClick={onClose} className="cursor-pointer text-red-500 hover:text-red-700 transition">
-      {crossIcon}
-    </div>
-  </div>
-
-  
-  <div className="space-y-4">
-    <input
-      type="text"
-      ref={nameRef}
-      placeholder="Name"
-      className="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-    />
-
-    <div className="flex flex-col gap-3">
-      <input
-        type="text"
-        ref={positionRef}
-        placeholder="Position"
-        className="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-      />
-      <input
-        type="text"
-        ref={locationRef}
-        placeholder="Location"
-        className="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-      />
-      <input
-        type="text"
-        ref={bioRef}
-        placeholder="Bio"
-        className="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-      />
-      <textarea
-        placeholder="Highlights"
-        ref={highlightsRef}
-        className="border border-gray-300 p-2 rounded h-20 focus:outline-none focus:ring-2 focus:ring-blue-400"
-      />
-    </div>
-
-    <p className="font-medium text-gray-600">Profile Pic:</p>
-    <input
-      type="file"
-      className="w-full border p-2 rounded bg-amber-200 cursor-pointer"
-      onChange={handlePicFile}
-    />
-  </div>
-
- 
-  <button
-    onClick={handleSubmit}
-    className="mt-4 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-lg transition"
-  >
-    ADD FOUNDER
-  </button>
-  {
-    loading && <p className='text-center text-xl m-4 text-slate-800 font-semibold'>Loading ...</p>
-  }
-</span>
-
-                   
-                </div>
-                </div>
-                </div> 
-                
-                
-                
-                
-                <div className="fixed mt-20 inset-0 flex justify-center items-center opacity-100 transition-all  duration-300 animate-fadeIn">
-        <div className='h-136 w-136 p-[1px] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] rounded-xl'>
-        <div className="bg-[#1d1b22] absolute p-6  rounded-xl h-135 w-135 overflow-auto  md:overflow-y-scroll no-scrollbar   transition-all duration-300">
-        <p>hey hi welcome</p>
-        <button onClick={()=>setResourcesPopUp(false)} className='text-red-500'>close</button>
-        <p>{activeResourceDetails.id}</p>
-        <p>{activeResourceDetails.title}</p>
-        <p>{activeResourceDetails.tweets[0]}</p>
-        
-        <div className='light h-56 w-56'>
-            
-        <Tweet id={`${activeResourceDetails.tweets[0]}`}  />
-        </div>
-             </div>
-        </div>
-        </div>*/

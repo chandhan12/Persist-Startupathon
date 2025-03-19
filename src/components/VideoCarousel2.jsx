@@ -22,16 +22,19 @@ const VideoCarousel2 = () => {
       {/* Left Side - Text (Increased Width) */}
       <div className="w-[725px] h-[383px] flex items-center  justify-center p-4">
         <div className="p-2 ">
-        <h2 className="text-white text-2xl md:text-[40px] font-sans font-semibold mx-1 md:m-2">
+        <h2 style={{fontFamily:"Bricolage Grotesque"}}
+         className="text-white text-[50px] font-[700] leading-[125%]  my-4">
      
-      <span className="bg-gradient-to-r from-purple-400 to-purple-500 text-transparent bg-clip-text font-bold">
+      <span className="bg-gradient-to-r from-[#AE98E7] to-[#805ED9] text-transparent bg-clip-text font-bold">
         Review videos
       </span>{" "}
      
       <br />
     </h2>
     <div className="h-[100px] w-[553px]">
-    <p>The process continues untill one candidate proves they
+    <p
+    style={{fontFamily:"Inter"}}
+    className="text-[18px] font-[400] leading-[125%] my-2">The process continues untill one candidate proves they
         have the pontential to be a CEO and founder.Next, Persist staff will review the submissios and explain why some 
             didn't make it. Every submission is carefully reviewed
     </p>
@@ -41,8 +44,8 @@ const VideoCarousel2 = () => {
       </div>
 
       {/* Middle - Main Video (Increased Width) */}
-      <motion.div
-        className="absolute left-[48%] w-[725px] h-[383px] flex items-center justify-center border border-purple-600 rounded-xl"
+      <div
+        className="absolute left-[48%] w-[725px] h-[383px] flex items-center justify-center bg-gradient-to-b from-[#AE98E7] to-[#805ED9] p-[1px] rounded-[10.31px]"
         key={activeVideos[0]}
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -51,7 +54,7 @@ const VideoCarousel2 = () => {
         layout
       >
         <iframe
-          className="w-full h-full rounded-xl shadow-lg"
+          className="w-full h-full rounded-[10.31px] bg-[#0A0A0A] shadow-lg"
           src={activeVideos[0]}
           title="YouTube video player"
           frameBorder="0"
@@ -59,14 +62,14 @@ const VideoCarousel2 = () => {
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>
-      </motion.div>
+      </div>
 
       {/* Right - Clickable Swappable Video (Ensuring Persistent Opacity) */}
      
     </div>
     <div className="flex items-center">
      <motion.div
-     className={`absolute right-0 w-[5%] h-[16%] flex items-center border border-purple-600 rounded-xl transition-opacity duration-300 ${
+     className={`absolute right-0 w-[5%] h-[16%] flex items-center bg-gradient-to-b from-[#AE98E7] to-[#805ED9] p-[1px] rounded-[10.31px] transition-opacity duration-300 ${
        isSwapped ? "opacity-60" : "opacity-40"
      } hover:opacity-60`}
      key={activeVideos[1]}

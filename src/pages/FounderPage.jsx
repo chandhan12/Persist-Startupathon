@@ -71,15 +71,15 @@ const FounderPage = () => {
       
       <br />
     </h2>
-    <div className='flex gap-4 text-[#FFFFFF] w-[1030px] h-[227px] m-4 '>
+    <div className='flex gap-[32px] text-[#FFFFFF] w-[1030px] h-[227px] m-4 '>
         <div className='h-[227px] w-[227px] rounded-2xl border border-purple-600'>
            <img src={founder.profilePic} className='h-full w-full rounded-2xl' alt="" />
         </div>
-        <div className='flex flex-col text-[#FFFFFF] h-[221px] w-[771px]'>
-            <h2 className='m-1 text-[32px] font-semibold'>{founder.name}</h2>
-            <p className='m-1 text-[16px]'>{founder.position}</p>
+        <div className='flex flex-col gap-[14px] text-[#FFFFFF] h-[221px] w-[771px]'>
+            <h2 className=' text-[32px] font-semibold'>{founder.name}</h2>
+            <p className=' text-[16px]'>{founder.position}</p>
             <div className='h-[32px] w-[95px] bg-gradient-to-b from-[#3C3C3C] to-[#1C1C1C] rounded-lg flex items-center gap-1 justify-center cursor-pointer'><img src={linkedIcon} className='h-[17px] w-[17px]' alt="" />LinkedIn</div>
-            <p className='m-1 text-[18px] '>Co-founded Messon Network, boostrapped to reach 2/3 of Akaimal's bandwidth resources
+            <p className=' text-[18px] '>Co-founded Messon Network, boostrapped to reach 2/3 of Akaimal's bandwidth resources
                 in 3 months,currently valued at $100m+; made 10x return from cryptocurrency investment in one year etc.
             </p>
         </div>
