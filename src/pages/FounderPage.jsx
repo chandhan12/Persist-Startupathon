@@ -62,8 +62,10 @@ const FounderPage = () => {
         <div className='absolute right-0 top-0'>
             <img src={tubeIcon} className='' alt="" />
         </div>
-    <div className='mx-10'>
-    <h2 className="text-[#FFFFFF] text-2xl md:text-3xl font-sans font-semibold mx-1 md:m-2">
+    <div className='mx-10 '>
+    <h2
+    style={{fontFamily:"Bricolage Grotesque"}}
+    className="text-[#FFFFFF] text-[36px] font-[700] leading-[125%] mx-1 mt-5 mb-12">
       Learn from {founder.name} :{" "}
       <span className="bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] text-transparent bg-clip-text font-bold">
         Insights & Expertise
@@ -76,10 +78,16 @@ const FounderPage = () => {
            <img src={founder.profilePic} className='h-full w-full rounded-2xl' alt="" />
         </div>
         <div className='flex flex-col gap-[14px] text-[#FFFFFF] h-[221px] w-[771px]'>
-            <h2 className=' text-[32px] font-semibold'>{founder.name}</h2>
-            <p className=' text-[16px]'>{founder.position}</p>
-            <div className='h-[32px] w-[95px] bg-gradient-to-b from-[#3C3C3C] to-[#1C1C1C] rounded-lg flex items-center gap-1 justify-center cursor-pointer'><img src={linkedIcon} className='h-[17px] w-[17px]' alt="" />LinkedIn</div>
-            <p className=' text-[18px] '>Co-founded Messon Network, boostrapped to reach 2/3 of Akaimal's bandwidth resources
+            <h2
+            style={{fontFamily:"Bricolage Grotesque"}}
+            className=' text-[30px] font-[700] leading-[130%]'>{founder.name}</h2>
+            <p
+            style={{fontFamily:"Bricolage Grotesque"}}
+            className=' text-[16px] font-[500] leading-[150%] '>{founder.position}</p>
+            <div className='h-[32px] w-[95px] bg-gradient-to-b from-[#3C3C3C] to-[#1C1C1C] rounded-[4px] flex items-center gap-1 justify-center cursor-pointer'><img src={linkedIcon} className='h-[17px] w-[17px]' alt="" />LinkedIn</div>
+            <p
+            style={{fontFamily:"Inter"}}
+            className=' text-[18px] font-[400] leading-[150%] '>Co-founded Messon Network, boostrapped to reach 2/3 of Akaimal's bandwidth resources
                 in 3 months,currently valued at $100m+; made 10x return from cryptocurrency investment in one year etc.
             </p>
         </div>
@@ -88,44 +96,58 @@ const FounderPage = () => {
     <div class="w-full border-t border-neutral-600"></div>
 
         <div className='flex justify-between ml-2 mr-8 my-4 '>
-            <div className='text-[18px] m-1'>
+            <div
+            style={{fontFamily:"Bricolage Grotesque"}}
+            className='text-[24px] font-[600] leading-[150%] m-1 text-[#F6F6F6]'>
                 Bio:
             </div>
             <div className='w-[1082px] h-[108px]'>  
-                <p className='m-1 text-[18px]'>
+                <p
+                style={{fontFamily:"Inter"}}
+                className='m-1 text-[18px] font-[500] leading-[150%]'>
                 {founder.bio} {founder.highlights}
                 </p>
             </div>
         </div>
         <div className='flex justify-between ml-2 mr-8 my-6'>
-            <div className='m-1 text-[18px]'>
+            <div style={{fontFamily:"Bricolage Grotesque"}}
+            className='text-[24px] font-[600] leading-[150%] m-1 text-[#F6F6F6]'>
                 Company:
             </div>
             <div className='w-[1082px] '>  
-                <p className='m-1 text-[18px]'>
+                <p style={{fontFamily:"Inter"}}
+                className='m-1 text-[18px] text-[#EDEDED] font-[500] leading-[150%]'>
                 Mask
                 </p>
             </div>
         </div>
         <div class="w-full border-t  border-neutral-600"></div>
-        <div className='h-[550px] w-[1298px] mt-10 flex flex-col gap-4 '>
-        <div className='flex flex-col gap-3'>
-                <p className='text-[15px]'>Primary location</p>
+        <div className='h-[550px] w-[1298px] mt-10 flex flex-col gap-[25px] '>
+        <div className='flex flex-col gap-4'>
+                <p
+                style={{fontFamily:"Bricolage Grotesque"}}
+                className='text-[20px] font-[500] leading-[150%]'>Primary location</p>
                 <div className='flex gap-2'>
                       
-                                <div className='bg-[#1e1d22] h-auto w-auto text-[16px] p-2 border border-neutral-600 text-[#FFFFFF] rounded-lg'>
+                                <div
+                                style={{fontFamily:"Inter"}}
+                                className='bg-white h-auto w-au font-[400] leading-[150%]to text-[16px] px-4 py-1 border border-neutral-600 text-black rounded-full '>
                                     {founder.location}
                             </div>
                         
                 </div>
             </div>
-            <div className='flex flex-col gap-3'>
-                <p className='text-[15px]'>Languages Spoken</p>
+            <div className='flex flex-col gap-4'>
+                <p
+                style={{fontFamily:"Bricolage Grotesque"}}
+                className='text-[20px] font-[500] leading-[150%]'>Languages Spoken</p>
                 <div className='flex gap-2'>
                        {
                         languages.map((item)=>{
                             return(
-                                <div className='bg-[#1e1d22] text-[16px] h-auto w-auto p-2 border border-neutral-600 text-[#FFFFFF] rounded-lg'>
+                                <div
+                                style={{fontFamily:"Inter"}}
+                                className='bg-white text-[16px] font-[400] leading-[150%] h-auto w-auto px-4 py-1 border border-neutral-600 text-black rounded-full '>
                                 {item}
                             </div>
                             )
@@ -133,13 +155,17 @@ const FounderPage = () => {
                        }
                 </div>
             </div>
-            <div className='flex flex-col gap-3'>
-                <p className='text-[15px]'>Regions of Expertise</p>
+            <div className='flex flex-col gap-4'>
+                <p
+                style={{fontFamily:"Bricolage Grotesque"}}
+                className='text-[20px] font-[500] leading-[150%]'>Regions of Expertise</p>
                 <div className='flex gap-2'>
                        {
                         regionExpertise.map((item)=>{
                             return(
-                                <div className='bg-[#1e1d22] text-[16px] h-auto w-auto p-2 border border-neutral-600 text-[#FFFFFF] rounded-lg'>
+                                <div
+                                style={{fontFamily:"Inter"}}
+                                className='bg-white text-[16px] font-[400] leading-[150%] h-auto w-auto px-4 py-1 border border-neutral-600 text-black rounded-full '>
                                 {item}
                             </div>
                             )
@@ -147,13 +173,17 @@ const FounderPage = () => {
                        }
                 </div>
             </div>
-            <div className='flex flex-col gap-3'>
-                <p className='text-[15px]'>Areas of Emerging Tech Expertise</p>
+            <div className='flex flex-col gap-4'>
+                <p
+                style={{fontFamily:"Bricolage Grotesque"}}
+                className='text-[20px] font-[500] leading-[150%]'>Areas of Emerging Tech Expertise</p>
                 <div className='flex gap-2'>
                        {
                         techExpertise.map((item)=>{
                             return(
-                                <div className='bg-[#1e1d22] text-[16px] h-auto w-auto p-2 border border-neutral-600 text-[#FFFFFF] rounded-lg'>
+                                <div
+                                style={{fontFamily:"Inter"}}
+                                className='bg-white text-[16px] font-[400] leading-[150%] h-auto w-auto px-4 py-1 border border-neutral-600 text-black rounded-full '>
                                 {item}
                             </div>
                             )
@@ -162,13 +192,17 @@ const FounderPage = () => {
                 </div>
                 
             </div>
-            <div className='flex flex-col gap-3'>
-                <p className='text-[15px]'>Areas of Business Expertise</p>
+            <div className='flex flex-col gap-4'>
+                <p
+                style={{fontFamily:"Bricolage Grotesque"}}
+                className='text-[20px] font-[500] leading-[150%]'>Areas of Business Expertise</p>
                 <div className='flex gap-2'>
                        {
                         businessExpertise.map((item)=>{
                             return(
-                                <div className='bg-[#1e1d22] text-[16px] h-auto w-auto p-2 border border-neutral-600 text-[#FFFFFF] rounded-lg'>
+                                <div
+                                style={{fontFamily:"Inter"}}
+                                className='bg-white text-[16px] font-[400] leading-[150%] h-auto w-auto px-4 py-1 border border-neutral-600 text-black rounded-full '>
                                 {item}
                             </div>
                             )
@@ -180,7 +214,7 @@ const FounderPage = () => {
         </div>
 
     </div>
-     <div className='flex justify-center relative'>
+     <div className='flex justify-center relative mt-20'>
         <img src={Icosahedron} alt="image" className="w-[161px] h-[161px] absolute -top-22 z-20" />
      <div className='h-[390px] w-[1200px] backdrop-brightness-[5] rounded-3xl flex flex-col items-center justify-center pt-4'
         style={
@@ -188,14 +222,20 @@ const FounderPage = () => {
         }
         >
             <div className='h-[292px] w-[627px] flex flex-col items-center justify-center '>
-                <h2 className='text-[#FFFFFF] text-4xl font-semibold text-center m-2'>Got an Idea of Your Own? Let's Make It Happen!</h2>
+                <h2
+                style={{fontFamily:"Bricolage Grotesque"}}
+                className='text-[#FFFFFF] text-[40px] font-[700] leading-[120%] text-center m-2'>Got an Idea of Your Own? Let's Make It Happen!</h2>
                 <div className='flex justify-center items-center h-[72px] w-[587px]'>
-                    <p className='text-center text-[#C8C6D3] text-[18px] mt-4 '>We are always on the lookout for visionary founders 
+                    <p
+                    style={{fontFamily:"Inter"}}
+                    className='text-center text-[#C8C6D3] text-[16px] font-[400] leading-[24px] mt-4 '>We are always on the lookout for visionary founders 
                         with groundbreaking startup ideas. If you’re ready to turn your vision into reality, 
                         apply below for our Fellowship Program and take the first step toward success.
                     </p>
                 </div>
-                <button onClick={handleNav} className='mt-8 cursor-pointer rounded-lg h-[44px] w-auto px-4 text-center text-md font-semibold bg-white text-[#805ED9]'>Accept the challenge! 🚀</button>
+                <a target='_blank' href="https://t.me/systemicpersistbot?start=dewdrop_2686031"><button
+                        style={{fontFamily:"Inter"}}
+                        className='mt-8 cursor-pointer rounded-[7.28px] h-[36px] w-[177px] p-[9.95px] text-center text-[12px] font-[600] leading-[150%] bg-white '><div className='flex gap-2'><p className='bg-gradient-to-b from-[#AE98E7] to-[#805ED9] text-transparent bg-clip-text'>Accept the challenge! </p> 🚀</div> </button></a>
             </div>
     </div>
    
