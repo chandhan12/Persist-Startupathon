@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectCoverflow, Navigation } from "swiper/modules";
 import step1icon from '../assets/step1icon.svg'
@@ -49,10 +49,19 @@ const steps = [
 
 const HowToWin = () => {
     const [activeIndex, setActiveIndex] = useState(1);
-    
+    const swiperRef = useRef(null);
     // Create refs for navigation buttons
     const prevRef = useRef(null);
     const nextRef = useRef(null);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        if (swiperRef.current) {
+          swiperRef.current.slideNext();
+        }
+      }, 5000);
+      return () => clearInterval(interval);
+    }, []);
 
     return (
       <div className="flex items-center gap-10 justify-center p-4 mt-20">
@@ -72,23 +81,26 @@ const HowToWin = () => {
            <div className="flex justify-center">
            <div className="w-[934px] h-[293px] flex flex-col gap-6 items-center">
                 <div className="w-[816px] h-[125px]">
-                <h2 className="text-white font-[Bricolage Grotesque] text-[48px] font-[700] text-center">
+                <h2 style={{fontFamily:"Bricolage Grotesque"}}
+                className="text-white  text-[48px] font-[700] leading-[125%] text-center">
                   How the Startupathon <span className="bg-gradient-to-b from-[#AE98E7] to-[#805ED9] text-transparent bg-clip-text">
                   Hiring Process
                     </span> Works
                 </h2>
                 </div>
                <div className="w-[770px] h-[56px]">
-               <p className="text-[16px] text-[#EDEDED] text-center font-[500]">
+               <p style={{fontFamily:"Inter"}}
+               className="text-[16px] text-[#EDEDED] text-center leading-[150%] font-[500]">
                At Startupathon, we make it easy for aspiring leaders to apply and get involved in challenges. Our hiring process helps you showcase your skills, build your potential, lead, and succeed as a founder.
                </p>
                </div>
-               <div className="flex justify-center gap-5 items-center">
+               <div className="flex justify-center gap-[15px] items-center">
                 <button ref={prevRef} className="bg-violet-50 w-[46px] h-[46px] text-center rounded-full p-2 text-black text-[50px]  transition-colors">
                   <ChevronLeft size={33} />
                 </button>
-                <div className=" w-[120px] h-auto font-[500] text-[40px]  flex justify-center items-center rounded-full z-10 text-[#F2EFFB] ">
-                  Step {activeIndex + 1}
+                <div  style={{fontFamily:"Bricolage Grotesque"}}
+                className=" w-[120px] h-auto font-[700] text-[40px]  flex gap-2 justify-center items-center rounded-full z-10 text-[#F2EFFB] ">
+                  Step <p>{activeIndex + 1}</p>
                 </div>
                 <button ref={nextRef} className="bg-violet-50 w-[46px] h-[46px] text-center rounded-full p-2 text-black text-[50px]  transition-colors">
                   <ChevronRight size={33} />
@@ -115,7 +127,8 @@ const HowToWin = () => {
             pagination={{ clickable: true }}
             navigation={{
               prevEl: prevRef.current,
-              nextEl: nextRef.current
+              nextEl: nextRef.current,
+              
             }}
             modules={[Pagination, EffectCoverflow, Navigation]}
             className="mySwiper mt-12"
@@ -135,6 +148,7 @@ const HowToWin = () => {
                 swiper.params.navigation.prevEl = prevRef.current;
                 swiper.params.navigation.nextEl = nextRef.current;
               }
+              swiperRef.current=swiper
               swiper.navigation.init();
               swiper.navigation.update();
             }}
@@ -153,10 +167,12 @@ const HowToWin = () => {
                       <div className="w-[155px] h-[164px] mb-2 text-violet-500">
                        <img src={step.icon} alt="icon" className="w-[155px] h-[164px] " />
                       </div>
-                      <h3 className="text-[32px] font-[500]  m-5 text-white text-center">
+                      <h3 style={{fontFamily:"Inter"}}
+                      className="text-[32px] font-[500] leading-[150%]  m-5 text-white text-center">
                         {step.title}
                       </h3>
-                      <p className="text-center text-[20px] font-[350] m-2 text-[#FFFFFF]">
+                      <p style={{fontFamily:"Inter"}}
+                      className="text-center text-[16px] font-[350] leading-[150%] m-2 text-[#FFFFFF]">
                         {step.description}
                       </p>
                     </div>
