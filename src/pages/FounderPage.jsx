@@ -59,7 +59,7 @@ const FounderPage = () => {
   return (
     <div className='flex flex-col  mt-20 relative'>
        
-        <div className='absolute right-0 top-0'>
+        <div className='absolute right-0 top-0 opacity-[50%]'>
             <img src={tubeIcon} className='' alt="" />
         </div>
     <div className='mx-10 '>
