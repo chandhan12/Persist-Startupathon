@@ -74,8 +74,10 @@ const FounderPage = () => {
       <br />
     </h2>
     <div className='flex gap-[32px] text-[#FFFFFF] w-[1030px] h-[227px] m-4 '>
-        <div className='h-[227px] w-[227px] rounded-2xl border border-purple-600'>
+        <div className='h-[227px] w-[227px] p-[1px] rounded-2xl bg-gradient-to-b from-[#D1AFFF] to-[#906CFF]'>
+        <div className=' h-full w-full rounded-2xl '>
            <img src={founder.profilePic} className='h-full w-full rounded-2xl' alt="" />
+        </div>
         </div>
         <div className='flex flex-col gap-[14px] text-[#FFFFFF] h-[221px] w-[771px]'>
             <h2
