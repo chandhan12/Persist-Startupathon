@@ -9,6 +9,7 @@ import CompletedPage from './pages/CompletedPage'
 import ChallengePage from './pages/ChallengePage'
 import FounderPage from './pages/FounderPage'
 import HowToWin from './pages/HowToWin'
+import NotFound from './pages/NotFound'
 
 
 
@@ -27,6 +28,7 @@ function App() {
       <Route path='/challenge/:challengeId' element={<ChallengePage/>} />
       <Route path='/founder/:founderId' element={<FounderPage/>} />
       <Route path='/howtowin' element={<HowToWin/>} />
+      <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
     </BrowserRouter>
