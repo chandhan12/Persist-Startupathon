@@ -308,7 +308,7 @@ const cursorGuideArr=[
                     className='bg-gradient-to-r  from-[#AE98E7] text-[45px] font-[700] leading-[125%] to-[#805ED9] text-transparent bg-clip-text '>{challenge.title}</h2>
                 <p 
                 style={{fontFamily:"Inter"}}
-                className=' text-[14px] font-[500] leading-[135%]'>{challenge.description}</p>
+                className=' text-[14px] font-[500] leading-[135%] line-clamp-2'>{challenge.description}</p>
                  </div>
                  <div className='w-[642px] h-[20px]'>
                 <p
