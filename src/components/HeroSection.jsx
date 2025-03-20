@@ -81,7 +81,7 @@ const   captionArr=caption.split(" ")
             }
           </div>
           <div className="m-2 mt-4">
-            <CustomButton text="Start your Journey" icon="🚀" height={'[56px]'} width={'[201px]'} path="challenge"  />
+            <CustomButton text="Start your Journey" icon="🚀" height={'[56px]'} width={'[201px]'} path="/"  />
           </div>
 
          
