@@ -50,7 +50,14 @@ const handleCompleter=()=>{
         <div className="bg-gradient-to-b from-[#565656] to-[#1C1C1C] border border-[#FFFFFF]/25   rounded-[8px] h-[28px] w-[136px] flex items-center justify-center gap-[4px] font-semibold">
             <span 
             style={{fontFamily:"Inter"}}
-            className='text-[12px] font-[700] leading-[150%] text-[#4EB400]'>IFO : ${project.funding} </span> <AlertCircle className='h-[14px] w-[14px] text-[12px] font-[700] leading-[150%] text-[#DDDDDD]' />
+            className='text-[12px] font-[700] leading-[150%] text-[#4EB400]'>IFO : ${project.funding} </span> <div className="relative group">
+            <AlertCircle className="h-[14px] w-[14px] text-[#DDDDDD] cursor-pointer" />
+            <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-[10px] w-max px-2 py-1 bg-black text-white text-[12px] transition-all duration-100 rounded-md opacity-0 group-hover:opacity-100 ">
+              Initial funding offered
+            </span>
+          </div>
+          
+          
         </div>
       </div>
     </div>
