@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from "react-scroll"
-import {  useParams } from 'react-router-dom'
+
+import {  Link, useParams } from 'react-router-dom'
 import parallelogram2 from "../assets/parallelogram2.png";
 import BotIcon from '../assets/BotIcon.png'
 import { minusIcon, plusIcon, sendIcon } from '../icons';
-import { Crosshair, CrossIcon, Minus, MoveLeft, MoveRight, PlusIcon, ShieldCloseIcon, WormIcon, X } from 'lucide-react';
+import { Crosshair, CrossIcon, LucidePenLine, Minus, MoveLeft, MoveRight, PlusIcon, ShieldCloseIcon, WormIcon, X } from 'lucide-react';
 import VideoCarousel from '../components/HiringSection2';
 import axios from 'axios';
 import TimeIcon from '../assets/TimeIcon.png'
@@ -16,6 +16,7 @@ import NeonCard4 from '../components/Ui/NeonCard4';
 import NeonCard5 from '../components/Ui/NeonCard5';
 import VideoCarousel2 from '../components/VideoCarousel2';
 import { Tweet } from 'react-tweet'
+import HiringProcessSection from '../components/HiringProcessSection';
 
 
 const ChallengePage = () => {
@@ -542,9 +543,9 @@ const cursorGuideArr=[
                         className='text-white text-[20px] font-[600] leading-[150%]'
                     >Still Have Doubts About Startupathon?</h2>
                    <div className='h-[44px] w-[253px] p-[1px] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] rounded-[12px]'>
-                   <button 
+                   <Link to='/' ><button 
                    style={{fontFamily:"Inter"}}
-                   className='h-full w-full cursor-pointer rounded-[12px] bg-[#1d1b22] text-white text-[14px] font-[500] leading-[150%] gap-[10px] '>Learn more about startupathon 🚀</button>
+                   className='h-full w-full cursor-pointer rounded-[12px] bg-[#1d1b22] text-white text-[14px] font-[500] leading-[150%] gap-[10px] '>Learn more about startupathon 🚀</button></Link>
                    </div>
                    </div>
                    <div className='h-[112px] w-[253px] flex flex-col gap-[8px]'>
@@ -552,7 +553,7 @@ const cursorGuideArr=[
                         style={{fontFamily:"Inter"}}
                         className='text-white text-[20px] font-[600] leading-[150%]'>Doesn't Match Your <br /> Skillset? </h2>
                         <div className='h-[44px] w-[253px] p-[1px] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] rounded-[12px]'>
-                   <Link to="challenge" smooth={true} duration={500}><button
+                   <Link to="/" smooth={true} duration={500}><button
                    style={{fontFamily:"Inter"}}
                    className='h-full cursor-pointer w-full rounded-[12px] bg-[#1d1b22] text-white text-[14px] font-[500] leading-[150%] gap-[10px] '>explore more opportunities 🚀</button></Link>
                    </div>
@@ -589,7 +590,10 @@ const cursorGuideArr=[
                 </div>
                 </div>
      </div>
-      <VideoCarousel2/>
+     
+     <VideoCarousel2/>
+     <HiringProcessSection/>
+     
       </div>
       
 
