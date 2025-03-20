@@ -8,7 +8,7 @@ const HiringProcessSection = () => {
     <div className="w-[664px] h-[383px] bg-gradient-to-b from-[#D1AFFF] to-[#906CFF] p-[2px] rounded-[10px]">
         <div className="h-full w-full ">
         <iframe
-          className="w-full h-full rounded-xl shadow-lg"
+          className="w-full h-full rounded-xl shadow-lg bg-[#0A0A0A]"
           src="https://www.loom.com/embed/0847b9257f144fd0830a8536dfbc8e81?sid=a859384c-c000-4971-99c6-6e66db5662ab"
           title="YouTube video player"
           frameBorder="0"

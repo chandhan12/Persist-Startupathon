@@ -576,7 +576,7 @@ const cursorGuideArr=[
                         <div className='flex justify-center items-cente w-[849px] h-[64px]'>
                             <p  
                             style={{fontFamily:"Bricolage Grotesque"}}
-                            className='text-center text-black text-[20px] font-[700] leading-[140%] '>Speed up your development process with a 14-day free trail of cursor AI.Cursor lets
+                            className='text-center text-black text-[20px] font-[700] leading-[140%] '>📍Speed up your development process with a 14-day free trail of cursor AI.Cursor lets
                                 your code an MVP with little to no coding skills in a day
                             </p>
                         </div>
